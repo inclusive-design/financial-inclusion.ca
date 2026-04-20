@@ -22,7 +22,7 @@
 				"patch"
 			],
 			"matchCurrentVersion": "!/^0/",
-			"minimumReleaseAge": 2,
+			"minimumReleaseAge": "2 days",
 			"automerge": true
 		}
 	]
