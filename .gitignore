@@ -1,5 +1,6 @@
+.direnv
 .DS_Store
+.zed
 **/.DS_Store
 node_modules
 _site
-src/_data/assets.json
