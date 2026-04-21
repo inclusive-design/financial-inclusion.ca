@@ -1,8 +1,12 @@
 {
 	"imports": {
 		"@inclusive-design/eslint-config": "npm:@inclusive-design/eslint-config@^0.3.0",
+		"@inclusive-design/markdownlint-config": "npm:@inclusive-design/markdownlint-config@^0.1.1",
+		"@inclusive-design/stylelint-config": "npm:@inclusive-design/stylelint-config@^0.1.0",
 		"eslint": "npm:eslint@^10.2.1",
-		"lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.2.4/"
+		"lume/": "https://cdn.jsdelivr.net/gh/lumeland/lume@3.2.4/",
+		"markdownlint-cli2": "npm:markdownlint-cli2@^0.22.0",
+		"stylelint": "npm:stylelint@^17.8.0"
 	},
 	"permissions": {
 		"lume": {
@@ -46,7 +50,9 @@
 			"description": "Run and serve the site for development",
 			"command": "deno task lume -s"
 		},
-		"eslint": "eslint ."
+		"eslint": "eslint .",
+		"stylelint": "stylelint \"**/*.css\"",
+		"markdownlint": "markdownlint-cli2 \"**/*.md\""
 	},
 	"compilerOptions": {
 		"types": [
