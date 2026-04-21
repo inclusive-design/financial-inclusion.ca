@@ -1,12 +1,13 @@
 ---
-permalink: '/admin/index.html'
-eleventyExcludeFromCollections: true
-locale: en
+url: /admin/index.html
+id: admin
+unlisted: true
+lang: en
 ---
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    {% include 'partials/global/meta.njk' %}
+    {{ include "../_includes/partials/global/meta.vto" }}
     <title>Content Manager</title>
   </head>
   <body>

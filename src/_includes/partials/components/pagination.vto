@@ -1,0 +1,19 @@
+<nav class="pagination" aria-label="{{ translations[lang].pagination }}">
+  <ul>
+    {{ if pagination.previous }}
+      <li>
+        <a href="{{ pagination.previous }}"><span aria-hidden="true"
+          >&larr;</span><span class="visually-hidden">{{
+            translations[lang].previous
+          }}</span></a>
+      </li>
+    {{ /if }}
+    {{ if pagination.next }}
+      <li>
+        <a href="{{ pagination.next }}"><span class="visually-hidden">{{
+            translations[lang].next
+          }}</span><span aria-hidden="true">&rarr;</span></a>
+      </li>
+    {{ /if }}
+  </ul>
+</nav>

@@ -1,0 +1,12 @@
+en:
+  menu: menu
+  previous: previous
+  next: next
+  page: page
+  pagination: pagination navigation
+fr:
+  menu: menu
+  previous: précédent
+  next: suivant
+  page: page
+  pagination: navigation par pagination

@@ -1,16 +1,10 @@
-FROM node:24.15-alpine3.23 AS builder
+FROM denoland/deno:2.7.12 AS builder
 
 WORKDIR /app
 
-COPY package*.json ./
-
-RUN apk add --no-cache git
-
-RUN npm ci
-
 COPY . ./
 
-RUN npm run build
+RUN deno task build
 
 FROM nginx:1.30.0-alpine
 

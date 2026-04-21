@@ -1,0 +1,19 @@
+<nav class="language" id="language-selector" aria-label="{{ language }}">
+  <ul>
+    {{ for alt of alternates }}
+      <li>
+        <a
+          href="{{ alt.url }}"
+          hreflang="{{ alt.lang }}"
+          {{ if url === alt.url }}
+            aria-current="page"{{ /if }}
+        >
+          {{
+            site[lang].languages.find((item) => item.code === alt.lang)
+              .name
+          }}
+        </a>
+      </li>
+    {{ /for }}
+  </ul>
+</nav>

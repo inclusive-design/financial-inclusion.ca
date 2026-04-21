@@ -15,7 +15,9 @@ public_folder: /assets/uploads
 i18n:
   locales: [en, fr]
   default_locale: en
-  save_all_locales: false
+  initial_locales: [en]
+  canonical_slug:
+    key: id
 
 collections:
   - label: Pages
@@ -27,42 +29,97 @@ collections:
     folder: src/collections/pages/
     extension: md
     create: true
-    filter: {field: layout, value: layouts/page}
+    slug: "{{fields._slug | localize}}"
     sortable_fields:
       fields: [title, order]
       default:
         field: order
         direction: ascending
     fields:
-      - {label: Title, name: title, widget: string, i18n: true}
-      - {label: UUID, name: uuid, widget: uuid, i18n: duplicate}
-      - {label: Layout, name: layout, widget: hidden, i18n: duplicate, default: layouts/page}
-      - {label: Navigation Order, name: order, widget: number, min: 0, i18n: duplicate}
-      - {label: Navigation Label, name: key, widget: string, required: false, i18n: true}
-      - {label: Excerpt, name: excerpt, widget: string, required: false, i18n: true}
-      - {label: Body, name: body, widget: markdown, i18n: true}
+      - { label: Title, name: title, widget: string, i18n: true }
+      - {
+          label: Short Title,
+          name: shortTitle,
+          widget: string,
+          required: false,
+          i18n: true,
+        }
+      - {
+          label: Navigation Order,
+          name: order,
+          widget: number,
+          min: 0,
+          i18n: duplicate,
+        }
+      - {
+          label: Excerpt,
+          name: excerpt,
+          widget: string,
+          required: false,
+          i18n: true,
+        }
+      - { label: Body, name: body, widget: markdown, i18n: true }
 
 singletons:
-  - label: Configuration
-    name: config
-    icon: settings
-    editor:
-      preview: false
-    file: src/_data/config.json
-    i18n: false
-    fields:
-      - {label: URL, name: url, widget: string}
-      - {label: Maximum Posts in RSS Feed, name: maxPostsInFeed, widget: number, min: 1, i18n: false}
-  - label: Site Data
+  - label: Site Configuration
     name: site
-    icon: code
+    icon: settings
     editor:
       preview: false
     file: src/_data/site.json
     i18n: true
     fields:
-      - {label: Name, name: name, widget: string, i18n: true}
-      - {label: Description, name: description, widget: text, i18n: true}
-      - {label: Author Name, name: authorName, widget: string, i18n: true}
-      - {label: Author Email, name: authorEmail, widget: string, i18n: duplicate}
-      - {label: Author Website, name: authorWebsite, widget: string, i18n: duplicate}
+      - { label: Name, name: name, widget: string, i18n: true }
+      - { label: Description, name: description, widget: text, i18n: true }
+      - { label: Author Name, name: authorName, widget: string, i18n: true }
+      - {
+          label: Author Email,
+          name: authorEmail,
+          widget: string,
+          i18n: duplicate,
+        }
+      - {
+          label: Author Website,
+          name: authorWebsite,
+          widget: string,
+          i18n: duplicate,
+        }
+      - { label: Canonical URL, name: url, widget: string, i18n: duplicate }
+      - label: Supported Languages
+        label_singular: Supported Language
+        name: languages
+        widget: list
+        i18n: duplicate
+        fields:
+          - label: Name
+            name: name
+            widget: string
+            i18n: true
+          - label: Code
+            name: code
+            widget: string
+            i18n: duplicate
+          - label: Direction
+            name: direction
+            widget: select
+            options:
+              - label: Left to Right
+                value: ltr
+              - label: Right to Left
+                value: rtl
+            i18n: duplicate
+  - label: Translations
+    label_singular: Translation
+    name: translations
+    icon: translate
+    editor:
+      preview: false
+    i18n:
+      initial_locales: all
+    file: src/_data.yml
+    fields:
+      - label: Translations
+        name: translations
+        widget: keyvalue
+        root: true
+        i18n: true
