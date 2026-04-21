@@ -16,8 +16,4 @@ jobs:
           cache: true
       - name: Lint files
         run: |
-          deno lint
-          deno fmt --check
-          deno task eslint
-          deno task stylelint
-          deno task markdownlint
+          deno task lint

@@ -52,7 +52,8 @@
 		},
 		"eslint": "eslint .",
 		"stylelint": "stylelint \"**/*.css\"",
-		"markdownlint": "markdownlint-cli2 \"**/*.md\""
+		"markdownlint": "markdownlint-cli2 \"**/*.md\"",
+		"lint": "deno task eslint && deno task stylelint && deno task markdownlint"
 	},
 	"compilerOptions": {
 		"types": [
