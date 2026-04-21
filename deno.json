@@ -79,6 +79,6 @@
 			]
 		}
 	},
-	"lock": false,
+	"lock": true,
 	"nodeModulesDir": "auto"
 }
