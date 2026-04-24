@@ -116,7 +116,7 @@ singletons:
       preview: false
     i18n:
       initial_locales: all
-    file: src/_data.yml
+    file: src/_data/translations.yml
     fields:
       - label: Translations
         name: translations
