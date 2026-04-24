@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html
+  lang="{{ lang }}"
+  dir="{{ site[lang].languages.find(item => item.code === lang).dir }}"
+>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    {{
+      set pageTitle = title
+        ? `${title} | ${site[lang ?? "en"].name}`
+        : site[lang ?? "en"].name
+    }}
+
+    <title>{{ pageTitle }}</title>
+    <link href="/assets/styles/app.css" rel="stylesheet" />
+    <!-- uioStyles -->
+
+    {{ include "partials/global/meta.vto" }}
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" id="manifest">
+    <script>
+      const language = "{{ lang }}";
+      const manifestUrl = `/manifest-${language}.json`;
+
+      document.querySelector("#manifest").setAttribute(
+        "href",
+        manifestUrl,
+      );
+    </script>
+    <script type="text/javascript" src="/assets/scripts/app.js" defer></script>
+    <!-- uioScripts -->
+  </head>
+  <body class='{{ bodyClass ?? "page" }}'>
+    <!-- uioTemplate -->
+    <header role="banner">
+      <div>
+        {{ include "partials/global/language-selector.vto" }}
+      </div>
+      <div>
+        {{ include "partials/global/brand.vto" }}
+        {{ include "partials/global/navigation.vto" }}
+      </div>
+    </header>
+
+    <main>
+      <article>
+        <header>
+          <h1>{{ title }}</h1>
+        </header>
+
+        <div class="content">
+          {{ content }}
+        </div>
+      </article>
+    </main>
+    <footer role="contentinfo"></footer>
+    <!-- uioCustomInit supportedLanguages[lang].uioSlug, supportedLanguages[lang].dir -->
+  </body>
+</html>

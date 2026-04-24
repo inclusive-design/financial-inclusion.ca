@@ -4,11 +4,9 @@ import eslintConfigInclusiveDesign from '@inclusive-design/eslint-config';
 export default defineConfig([
 	{
 		extends: [eslintConfigInclusiveDesign],
+		ignores: ['_site/**'],
 		rules: {
 			camelcase: ['error', {properties: 'never'}],
 		},
-	},
-	{
-		ignores: ['_site/**', 'README.md', '!.*.js', '!.*.mjs'],
 	},
 ]);

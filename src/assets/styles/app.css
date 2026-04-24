@@ -1,9 +1,19 @@
-/* These example styles may be removed when you start work on your project. Or not! The choice is yours. */
-
 :root {
-    --base-font-family: system-ui, -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, oxygen, ubuntu, cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  --base-font-family: "Atkinson Hyperlegible Next", sans-serif;
 }
 
 body {
-    font-family: var(--base-font-family);
+  font-family: var(--base-font-family);
+}
+
+.visually-hidden {
+  border: 0;
+  /* stylelint-disable-next-line property-no-deprecated */
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }

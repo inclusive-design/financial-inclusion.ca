@@ -1,6 +1,6 @@
-.direnv
+_site
+_cache
+.env
 .DS_Store
 .zed
-**/.DS_Store
 node_modules
-_site

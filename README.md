@@ -1,3 +1,3 @@
-# Financial Inclusion
+# Financial Inclusion and Resilience Movement
 
-The Partnerships for Financial Inclusion website.
+The Financial Inclusion and Resilience Movement (FIRM) website.
