@@ -1,5 +1,5 @@
 <div class="brand">
-  {{ set homeUrl = lang && lang !== "en" ? "/" : `/${lang}/` }}
+  {{ set homeUrl = lang && lang === "en" ? "/" : `/${lang}/` }}
   <a
     rel="home"
     href="{{ homeUrl }}"

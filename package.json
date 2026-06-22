@@ -1,0 +1,80 @@
+{
+	"name": "@inclusive-design/financial-inclusion.ca",
+	"version": "2026.4.0",
+	"description": "The Financial Inclusion and Resilience Movement (FIRM) website.",
+	"keywords": [
+		"build-awesome",
+		"vento",
+		"vite"
+	],
+	"homepage": "https://github.com/inclusive-design/financial-inclusion#readme",
+	"bugs": {
+		"url": "https://github.com/inclusive-design/financial-inclusion/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/inclusive-design/financial-inclusion.git"
+	},
+	"license": "BSD-3-Clause",
+	"author": "OCAD University <idrc@ocadu.ca>",
+	"type": "module",
+	"main": "eleventy.config.js",
+	"scripts": {
+		"build": "npm-run-all -l clean -s build:eleventy",
+		"build:eleventy": "eleventy",
+		"clean": "rimraf _site",
+		"debug": "DEBUG=Eleventy* eleventy",
+		"dev": "cross-env NODE_ENV=development eleventy --serve",
+		"lint": "run-s -l lint:*",
+		"lint:eslint": "eslint",
+		"lint:markdownlint": "markdownlint-cli2 \"**/*.md\"",
+		"lint:stylelint": "stylelint \"**/*.css\"",
+		"start": "npm-run-all -l clean -p dev",
+		"prepare": "husky",
+		"test": "node --test"
+	},
+	"dependencies": {
+		"@11ty/eleventy": "^3.1.0",
+		"@11ty/eleventy-fetch": "^5.1.0",
+		"@11ty/eleventy-navigation": "^1.0.0",
+		"@11ty/eleventy-plugin-vite": "^8.0.0",
+		"@11ty/font-awesome": "^1.0.0",
+		"@zachleat/filter-container": "nedatidrc/filter-container#feat/paginated-results",
+		"eleventy-plugin-fluid": "^3.2.0",
+		"eleventy-plugin-vento": "^5.0.0",
+		"i18n-js": "^4.0.0",
+		"infusion": "^4.8.0",
+		"lodash": "^4.0.0",
+		"markdown-it": "^14.0.0",
+		"rimraf": "^6.0.0",
+		"vite": "^8.0.0"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^21.0.0",
+		"@commitlint/config-conventional": "^21.0.0",
+		"@inclusive-design/eslint-config": "^0.5.0",
+		"@inclusive-design/markdownlint-config": "^0.1.0",
+		"@inclusive-design/stylelint-config": "^0.1.0",
+		"cross-env": "^10.0.0",
+		"debug": "^4.3.5",
+		"eslint": "^10.2.1",
+		"husky": "^9.0.11",
+		"linkedom": "^0.18.6",
+		"lint-staged": "^17.0.0",
+		"markdownlint-cli2": "^0.22.0",
+		"npm-run-all2": "^9.0.0",
+		"pagefind": "^1.4.0"
+	},
+	"lint-staged": {
+		"*.css": [
+			"stylelint --fix"
+		],
+		"*.{cjs,js,json,mjs}": [
+			"eslint --fix"
+		],
+		"*.md": [
+			"eslint --fix",
+			"markdownlint-cli2 --fix"
+		]
+	}
+}
