@@ -6,6 +6,6 @@ COPY . ./
 
 RUN deno task build
 
-FROM nginx:1.30.0-alpine
+FROM nginx:1.31.2-alpine
 
 COPY --from=builder /app/_site /usr/share/nginx/html
