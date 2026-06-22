@@ -1,8 +1,8 @@
 export const lang = ['en', 'fr'];
-export const en = {url: '/manifest-en.json'};
-export const fr = {url: '/manifest-fr.json'};
+export const en = { url: '/manifest-en.json' };
+export const fr = { url: '/manifest-fr.json' };
 
-const manifest = data =>
+const manifest = (data) =>
 	JSON.stringify(
 		{
 			name: data.site[data.lang].name,
