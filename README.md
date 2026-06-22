@@ -4,16 +4,14 @@ The Financial Inclusion and Resilience Movement (FIRM) website.
 
 ## Usage
 
-The site is built with [Lume](https://lume.land) and uses [Vento](https://vento.js.org).
-
-To run the site locally, you'll need to install [Deno](https://docs.deno.com/runtime/getting_started/installation/).
+The site is built with [Eleventy](https://11ty.dev) and uses [Vento](https://vento.js.org).
 
 ### Production Builds
 
 To build a static version of the website, execute the following command:
 
 ```bash
-deno task build
+npm run build
 ```
 
 The site will be built in the `_site` directory. You can serve it locally using your preferred method for serving static
@@ -24,12 +22,12 @@ files.
 You can run the site locally in development mode by executing the following command:
 
 ```bash
-deno task serve
+npm start
 ```
 
-The site will be available at <https://localhost:3000>.
+The site will be available at <https://localhost:8080>.
 
-You can access the site's instance of [Sveltia CMS](https://sveltiacms.app) in Chromium-based browser by visiting <https://localhost:3000/admin/>
+You can access the site's instance of [Sveltia CMS](https://sveltiacms.app) in Chromium-based browser by visiting <https://localhost:8080/admin/>
 and selecting the site directory when prompted. Changes will be made to the local filesystem.
 
 ### Linting
@@ -38,27 +36,10 @@ and selecting the site directory when prompted. Changes will be made to the loca
 and [Markdown](https://github.com/inclusive-design/markdownlint-config) can be linted using the following command:
 
 ```bash
-deno task lint
+npm run lint
 ```
 
 Note that the built-in Deno formatter and linter are not currently used.
-
-### Deployment using Docker
-
-To serve the website using a [Docker](https://docs.docker.com/get-docker/) container, execute the following commands:
-
-```bash
-docker build -t financial-inclusion .
-docker run --name financial-inclusion -p 3000:80 financial-inclusion
-```
-
-The website will be available at <https://localhost:3000>.
-
-To stop and remove the container, execute the following command:
-
-```bash
-docker rm -f financial-inclusion
-```
 
 ## Release Process
 

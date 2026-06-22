@@ -1,58 +1,11 @@
-<nav class="nav" id="menu" aria-label="{{ translations[lang].menu }}">
-  <ul class="menu">
-    {{# Retrieve menu items #}}
-    {{ set menu = nav.menu("/", "unlisted!=true") }}
-    <li>
-      {{# Fetch the top-level entry by ID #}}
-      {{ set entry = search.page(`id=${menu.data.id}`) }}
-      {{# If the top-level entry is translated, fetch the translation in the current langauge. #}}
-      {{ if entry.alternates }}
-        {{ for alt of entry.alternates }}
-          {{ if alt.lang == lang }}
-            <a
-              href="{{ alt.url }}"
-              {{ if url === alt.url }}
-                aria-current="page"{{ /if }}
-            >{{ alt?.shortTitle ?? alt.title }}</a>
-          {{ /if }}
-        {{ /for }}
-        {{# If the entry is not translated, use the default. #}}
-      {{ else }}
-        <li>
-          <a
-            href="{{ entry.url }}"
-            {{ if url === entry.url }}
-              aria-current="page"{{ /if }}
-          >{{ entry?.shortTitle ?? entry.title }}</a>
-        </li>
-      {{ /if }}
-    </li>
-    {{ for child of menu.children }}
-      {{# Fetch each entry by ID #}}
-      {{ set entry = search.page(`id=${child.data.id}`) }}
-      {{# If the entry is translated, fetch the translation in the current langauge. #}}
-      {{ if entry.alternates }}
-        {{ for alt of entry.alternates }}
-          {{ if alt.lang == lang }}
-            <li>
-              <a
-                href="{{ alt.url }}"
-                {{ if url === alt.url }}
-                  aria-current="page"{{ /if }}
-              >{{ alt?.shortTitle ?? alt.title }}</a>
-            </li>
-          {{ /if }}
-        {{ /for }}
-        {{# If the entry is not translated, use the default. #}}
-      {{ else }}
-        <li>
-          <a
-            href="{{ entry.url }}"
-            {{ if url === entry.url }}
-              aria-current="page"{{ /if }}
-          >{{ entry?.shortTitle ?? entry.title }}</a>
-        </li>
-      {{ /if }}
-    {{ /for }}
-  </ul>
+<nav aria-label="{{ __ 'menu', {}, {lang, translations} }}">
+   	{{ set navItems = collections['pages_' + lang] |> eleventyNavigation }}
+
+	<ul role="list">
+		{{ for navItem of navItems }}
+		<li class="nav-link">
+			<a href="{{ navItem.url }}"{{ if page.url === navItem.url }} aria-current="page"{{ /if }}>{{ navItem.data.title }}</a>
+		</li>
+		{{ /for }}
+	</ul>
 </nav>
