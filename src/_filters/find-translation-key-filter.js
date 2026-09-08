@@ -4,13 +4,13 @@
  * @returns {string|false} The URL of the treanslated page, or false if no translation is found.
  */
 export default function findTranslationKeyFilter(translationKey, desiredLang) {
-	let translationUrl = false;
+	let isTranslationUrl = false;
 
 	for (const element of this.data.collections.all) {
 		if (element.data.translationKey === translationKey && element.data.lang === desiredLang) {
-			translationUrl = element.url;
+			isTranslationUrl = element.url;
 		}
 	}
 
-	return translationUrl;
+	return isTranslationUrl;
 }

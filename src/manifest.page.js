@@ -2,7 +2,10 @@ export const lang = ['en', 'fr'];
 export const en = { url: '/manifest-en.json' };
 export const fr = { url: '/manifest-fr.json' };
 
-const manifest = (data) =>
+/**
+ * @param {object} data - The site's data object.
+ */
+export default function manifest(data) {
 	JSON.stringify(
 		{
 			name: data.site[data.lang].name,
@@ -23,5 +26,4 @@ const manifest = (data) =>
 		undefined,
 		2,
 	);
-
-export default manifest;
+}
