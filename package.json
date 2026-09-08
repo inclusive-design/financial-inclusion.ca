@@ -76,5 +76,10 @@
 			"eslint --fix",
 			"markdownlint-cli2 --fix"
 		]
+	},
+	"allowScripts": {
+		"esbuild@0.28.2": true,
+		"fsevents@2.3.3": true,
+		"unrs-resolver@1.12.2": true
 	}
 }
