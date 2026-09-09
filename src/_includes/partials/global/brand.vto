@@ -1,9 +1,7 @@
-<div class="brand">
+<div class="[ wrapper ]">
+  <div class="[ brand ]">
   {{ set homeUrl = lang && lang === "en" ? "/" : `/${lang}/` }}
-  <a
-    rel="home"
-    href="{{ homeUrl }}"
-    {{ if url === homeUrl }}
-      aria-current="page"{{ /if }}
-  >{{ site[lang].name }}</a>
+
+          <a rel="home" href="{{ homeUrl }}" aria-label="{{ site[lang].name }}"> {{ include 'svg/firm-wordmark.svg' }} </a>
+  </div>
 </div>
