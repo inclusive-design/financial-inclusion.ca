@@ -5,7 +5,7 @@
           <div class="[ menu-toggle ]">
             <a
               class="button"
-              href="/menu/"
+              href="/{{ if lang !== 'en' }}{{ lang }}/{{ /if }}menu/"
               aria-label="{{ __ 'Open menu', {}, {lang, translations} }}"
             >
               <svg

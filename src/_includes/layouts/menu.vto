@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html
+  lang="{{ lang }}"norma
+  dir="{{ site[lang].languages.find(item => item.code === lang).dir }}"
+>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+
+    {{
+      set pageTitle = title
+        ? `${title} | ${site[lang ?? "en"].name}`
+        : site[lang ?? "en"].name
+    }}
+
+    <title>{{ pageTitle }}</title>
+    <link href="/assets/styles/app.css" rel="stylesheet" />
+    <!-- uioStyles -->
+
+    {{ include "partials/global/meta.vto" }}
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" id="manifest">
+    <script>
+      const language = "{{ lang }}";
+      const manifestUrl = `/manifest-${language}.json`;
+
+      document.querySelector("#manifest").setAttribute(
+        "href",
+        manifestUrl,
+      );
+    </script>
+    <script type="module" src="/assets/scripts/main.js"></script>
+    <link href="/assets/styles/main.css" rel="stylesheet" />
+    <link rel="preload" as="font" type="font/woff2" crossorigin>
+    <!-- uioScripts -->
+  </head>
+  <body class='menu'>
+    <!-- uioTemplate -->
+    <header>
+    	<div class="[ global ] [ inverse ]">
+      		<div class="[ wrapper ] [ switcher ] [ step--1 ]">
+		        <div>
+		          <a rel="external" href="https://idrc.ocadu.ca/">
+		            An Inclusive Design Research Centre Project
+		          </a>
+		        </div>
+		        <ul role="list" class="[ flex ]" data-grow="false" data-separator="/">
+		          <li>
+		            <a href="/" lang="en-CA" hreflang="en-CA" aria-current="page"
+		              >English</a
+		            >
+		          </li>
+		          <li>
+		            <a href="/fr/" lang="fr-CA" hreflang="fr-CA">Français</a>
+		          </li>
+		        </ul>
+        	</div>
+     	</div>
+        {{ include "partials/global/brand.vto" }}
+    </header>
+
+    <main>
+        <h1 class="visually-hidden" id="site-menu">{{ title }}</h1>
+        <incd-nav>
+	       	<nav class="[ navigation ]" aria-labelledby="site-menu">
+			   	{{ set navItems = collections['pages_' + lang] |> eleventyNavigation }}
+				<div class="[ wrapper ]">
+                    <div class="[ menu-toggle ]">
+                      <a
+                        class="button"
+                        href="/"
+                        onClick="document.referrer ? history.back() : window.location.href = '/'; return false;"
+                        aria-label="{{ __ 'Close menu', {}, {lang, translations} }}"
+                      >
+                        <svg
+                          role="presentation"
+                          class="open icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="45"
+                          height="44"
+                          fill="none"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="4"
+                            d="M6 22h33M6 11h33M6 33h33"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div>
+                <ul role="list">
+                	{{ for navItem of navItems }}
+					<li>
+						<a class="link" href="{{ navItem.url }}"{{ if page.url === navItem.url }} aria-current="page"{{ /if }}>{{ navItem.data.title }}</a>
+					</li>
+					{{ /for }}
+				</ul>
+			</nav>
+        </incd-nav>
+    </main>
+    {{ include "partials/global/footer.vto" }}
+    <!-- uioCustomInit supportedLanguages[lang].uioSlug, supportedLanguages[lang].dir -->
+  </body>
+</html>
