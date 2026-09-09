@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html
-  lang="{{ lang }}"
+  lang="{{ lang }}"norma
   dir="{{ site[lang].languages.find(item => item.code === lang).dir }}"
 >
   <head>
@@ -36,7 +36,7 @@
     <link rel="preload" as="font" type="font/woff2" crossorigin>
     <!-- uioScripts -->
   </head>
-  <body class='{{ bodyClass ?? "page" }}'>
+  <body class='menu'>
     <!-- uioTemplate -->
     <header>
     	<div class="[ global ] [ inverse ]">
@@ -59,19 +59,48 @@
         	</div>
      	</div>
         {{ include "partials/global/brand.vto" }}
-        {{ include "partials/global/navigation.vto" }}
     </header>
 
-    <main class="[ flow ] [ prose ]">
-      <div class="[ flow ] [ hero ] [ region ]">
-        <div class="[ wrapper ]">
-          <h1>{{ title }}</h1>
-        </div>
-      </div>
-      <div class="[ flow ] [ region ] [ wrapper ]">
-        {{ content }}
-        </div>
-      </article>
+    <main>
+        <h1 class="visually-hidden" id="site-menu">{{ title }}</h1>
+        <incd-nav>
+	       	<nav class="[ navigation ]" aria-labelledby="site-menu">
+			   	{{ set navItems = collections['pages_' + lang] |> eleventyNavigation }}
+				<div class="[ wrapper ]">
+                    <div class="[ menu-toggle ]">
+                      <a
+                        class="button"
+                        href="/"
+                        onClick="document.referrer ? history.back() : window.location.href = '/'; return false;"
+                        aria-label="{{ __ 'Close menu', {}, {lang, translations} }}"
+                      >
+                        <svg
+                          role="presentation"
+                          class="open icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="45"
+                          height="44"
+                          fill="none"
+                        >
+                          <path
+                            stroke="currentColor"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="4"
+                            d="M6 22h33M6 11h33M6 33h33"
+                          ></path>
+                        </svg>
+                      </a>
+                    </div>
+                <ul role="list">
+                	{{ for navItem of navItems }}
+					<li>
+						<a class="link" href="{{ navItem.url }}"{{ if page.url === navItem.url }} aria-current="page"{{ /if }}>{{ navItem.data.title }}</a>
+					</li>
+					{{ /for }}
+				</ul>
+			</nav>
+        </incd-nav>
     </main>
     {{ include "partials/global/footer.vto" }}
     <!-- uioCustomInit supportedLanguages[lang].uioSlug, supportedLanguages[lang].dir -->

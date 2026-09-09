@@ -1,6 +1,8 @@
 {
 	"en": {
 		"menu": "menu",
+		"Open menu": "Open menu",
+		"Close menu": "Close menu",
 		"previous": "previous",
 		"next": "next",
 		"page": "page",
@@ -8,6 +10,8 @@
 	},
 	"fr": {
 		"menu": "menu",
+		"Open menu": "Ouvrir le menu",
+		"Close menu": "Fermer le menu",
 		"previous": "précédent",
 		"next": "suivant",
 		"page": "page",
