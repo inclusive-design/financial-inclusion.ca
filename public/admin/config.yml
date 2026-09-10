@@ -52,6 +52,16 @@ collections:
           i18n: duplicate,
         }
       - {
+          label: Parent,
+          name: parent,
+          widget: relation,
+          collection: 'page',
+          display_fields: ['title'],
+          value_field: 'id',
+          i18n: duplicate,
+          required: false,
+        }
+      - {
           label: Excerpt,
           name: excerpt,
           widget: string,
@@ -116,7 +126,7 @@ singletons:
       preview: false
     i18n:
       initial_locales: all
-    file: src/_data/translations.yml
+    file: src/_data/translations.json
     fields:
       - label: Translations
         name: translations

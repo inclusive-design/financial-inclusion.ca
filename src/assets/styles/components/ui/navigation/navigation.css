@@ -285,7 +285,7 @@
 
     button {
         display: flex;
-        height: var(--fi-space-fixed-2xl);
+        height: var(--firm-space-fixed-2xl);
         justify-content: flex-start;
         padding-left: var(--firm-space-fixed-xs);
         padding-right: var(--firm-space-fixed-xs);

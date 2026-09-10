@@ -1,8 +1,10 @@
 ---
-title: Accueil
-id: 2e4f9f73-dda1-42c6-a732-138e0b033146
+id: index
+title: Acceuil
+shortTitle: ''
 order: 1
+parent: ''
+excerpt: ''
 ---
 
-Vous pouvez rédiger le contenu de votre page au format
-[Markdown](https://www.11ty.dev/docs/languages/markdown/).
+Content goes here.
