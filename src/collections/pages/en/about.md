@@ -1,10 +1,10 @@
 ---
-title: About Us
 id: about
-order: 2
-shortTitle: About
-excerpt: This is a short description of the page.
+title: About
+shortTitle: ''
+order: 1
+parent: index
+excerpt: ''
 ---
 
-Trivet is a simple starter kit for Eleventy-based static sites for the Fluid
-Project.
+About.

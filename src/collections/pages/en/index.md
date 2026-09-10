@@ -1,10 +1,10 @@
 ---
+id: index
 title: Home
-id: home
+shortTitle: ''
 order: 1
-key: ""
-excerpt: ""
+parent: ''
+excerpt: ''
 ---
 
-You can write content for your page in
-[Markdown](https://www.11ty.dev/docs/languages/markdown/) format.
+Content goes here.

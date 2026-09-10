@@ -92,13 +92,22 @@
                         </svg>
                       </a>
                     </div>
-                <ul role="list">
-                	{{ for navItem of navItems }}
+                    <ul role="list">
+			{{ for navItem of navItems }}
+			<li>
+				<a class="link" href="{{ navItem.url }}"{{ if page.url === navItem.url }} aria-current="page"{{ /if }}>{{ navItem.data.title }}</a>
+				{{ if navItem.children.length > 0 }}
+				<ul role="list">
+					{{ for child of navItem.children }}
 					<li>
-						<a class="link" href="{{ navItem.url }}"{{ if page.url === navItem.url }} aria-current="page"{{ /if }}>{{ navItem.data.title }}</a>
+						<a class="link" href="{{ child.url }}"{{ if page.url === child.url }} aria-current="page"{{ /if }}>{{ child.data.title }}</a>
 					</li>
 					{{ /for }}
 				</ul>
+				{{ /if }}
+			</li>
+			{{ /for }}
+		</ul>
 			</nav>
         </incd-nav>
     </main>

@@ -8,7 +8,7 @@ export default {
 			}
 
 			return {
-				key: data.translationKey,
+				key: data.id,
 				title: data.shortTitle === '' ? data.title : data.shortTitle,
 				order: data.order,
 				parent: data.parent || undefined,
