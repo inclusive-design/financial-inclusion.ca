@@ -1,9 +1,8 @@
 ---
-id: about
-title: About
+id: contact
+title: Contact
 shortTitle: ''
-order: 1
-parent: index
+order: 3
 excerpt: ''
 ---
 
