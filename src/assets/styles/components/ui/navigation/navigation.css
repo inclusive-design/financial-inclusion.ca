@@ -222,9 +222,16 @@
         margin-block-start: 0;
         margin-left: calc(-1 * var(--firm-space-fixed-md));
         max-width: calc(var(--firm-wrapper-max-width, 90rem) - 2 * var(--firm-space-fixed-md));
+        height: auto;
+        min-height: var(--firm-space-fixed-3xl);
         position: revert;
         flex-direction: column;
         width: 100vw;
+
+        a {
+        	height: var(--firm-space-fixed-3xl);
+         	width: 100%;
+        }
     }
 
     li {
@@ -285,7 +292,7 @@
 
     button {
         display: flex;
-        height: var(--firm-space-fixed-2xl);
+        height: var(--firm-space-fixed-3xl);
         justify-content: flex-start;
         padding-left: var(--firm-space-fixed-xs);
         padding-right: var(--firm-space-fixed-xs);
