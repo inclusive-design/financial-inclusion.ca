@@ -3,7 +3,8 @@
 	"version": "2026.4.0",
 	"description": "The Financial Inclusion and Resilience Movement (FIRM) website.",
 	"keywords": [
-		"build-awesome",
+		"eleventy",
+		"sveltia-cms",
 		"vento",
 		"vite"
 	],

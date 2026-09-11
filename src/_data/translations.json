@@ -1,20 +1,22 @@
 {
-	"en": {
-		"menu": "menu",
-		"Open menu": "Open menu",
-		"Close menu": "Close menu",
-		"previous": "previous",
-		"next": "next",
-		"page": "page",
-		"pagination": "pagination navigation"
-	},
-	"fr": {
-		"menu": "menu",
-		"Open menu": "Ouvrir le menu",
-		"Close menu": "Fermer le menu",
-		"previous": "précédent",
-		"next": "suivant",
-		"page": "page",
-		"pagination": "navigation par pagination"
-	}
+  "en": {
+    "menu": "menu",
+    "Open menu": "Open menu",
+    "Close menu": "Close menu",
+    "previous": "previous",
+    "next": "next",
+    "page": "page",
+    "pagination": "pagination navigation",
+    "about-slug": "about"
+  },
+  "fr": {
+    "menu": "menu",
+    "Open menu": "Ouvrir le menu",
+    "Close menu": "Fermer le menu",
+    "previous": "précédent",
+    "next": "suivant",
+    "page": "page",
+    "pagination": "navigation par pagination",
+    "about-slug": "a-propos"
+  }
 }

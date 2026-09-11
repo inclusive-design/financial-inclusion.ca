@@ -12,6 +12,13 @@ backend:
 media_folder: src/assets/uploads
 public_folder: /assets/uploads
 
+output:
+  omit_empty_optional_fields: true
+
+slug:
+  encoding: ascii
+  clean_accents: true
+
 i18n:
   locales: [en, fr]
   default_locale: en
@@ -26,49 +33,43 @@ collections:
     icon: draft
     i18n:
       structure: multiple_folders
-    folder: src/collections/pages/
+      omit_default_locale_from_file_path: true
+    folder: src/collections/pages
+    reorder: true
+    nested:
+      depth: 3
+      summary: '{{title}}'
+      subfolders: true
+    meta: { path: { index_file: index } }
+    slug: "{{fields._slug | localize}}"
+    preview_path: '/{{dirname}}/'
+    filter: { field: id, pattern: '^(?!(index|404)$).+$' }
     extension: md
     create: true
-    slug: "{{fields._slug | localize}}"
     sortable_fields:
       fields: [title, order]
       default:
         field: order
         direction: ascending
     fields:
-      - { label: Title, name: title, widget: string, i18n: true }
-      - {
-          label: Short Title,
-          name: shortTitle,
-          widget: string,
-          required: false,
-          i18n: true,
-        }
-      - {
-          label: Navigation Order,
-          name: order,
-          widget: number,
-          min: 0,
-          i18n: duplicate,
-        }
-      - {
-          label: Parent,
-          name: parent,
-          widget: relation,
-          collection: 'page',
-          display_fields: ['title'],
-          value_field: 'id',
-          i18n: duplicate,
-          required: false,
-        }
-      - {
-          label: Excerpt,
-          name: excerpt,
-          widget: string,
-          required: false,
-          i18n: true,
-        }
-      - { label: Body, name: body, widget: markdown, i18n: true }
+      - label: Title
+        name: title
+        widget: string
+        i18n: true
+      - label: Navigation Order,
+        name: order
+        widget: number
+        min: 0
+        i18n: duplicate
+      - label: Excerpt
+        name: excerpt
+        widget: string
+        required: false
+        i18n: true
+      - label: Body
+        name: body
+        widget: markdown
+        i18n: true
 
 singletons:
   - label: Site Configuration
@@ -79,22 +80,30 @@ singletons:
     file: src/_data/site.json
     i18n: true
     fields:
-      - { label: Name, name: name, widget: string, i18n: true }
-      - { label: Description, name: description, widget: text, i18n: true }
-      - { label: Author Name, name: authorName, widget: string, i18n: true }
-      - {
-          label: Author Email,
-          name: authorEmail,
-          widget: string,
-          i18n: duplicate,
-        }
-      - {
-          label: Author Website,
-          name: authorWebsite,
-          widget: string,
-          i18n: duplicate,
-        }
-      - { label: Canonical URL, name: url, widget: string, i18n: duplicate }
+      - label: Name
+        name: name
+        widget: string
+        i18n: true
+      - label: Description
+        name: description
+        widget: text
+        i18n: true
+      - label: Author Name
+        name: authorName
+        widget: string
+        i18n: true
+      - label: Author Email
+        name: authorEmail
+        widget: string
+        i18n: duplicate
+      - label: Author Website
+        name: authorWebsite
+        widget: string
+        i18n: duplicate
+      - label: Canonical URL
+        name: url
+        widget: string
+        i18n: duplicate
       - label: Supported Languages
         label_singular: Supported Language
         name: languages
