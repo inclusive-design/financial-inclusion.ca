@@ -11,6 +11,10 @@ backend:
     deleteMedia: 'chore(cms): delete "{{path}}"'
 media_folder: src/assets/uploads
 public_folder: /assets/uploads
+logo:
+  src: /assets/images/logo.svg
+  show_in_header: false
+app_title: FIRM CMS
 
 output:
   omit_empty_optional_fields: true
