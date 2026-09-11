@@ -30,7 +30,7 @@
 				{{ for navItem of navItems }}
 				<li>
 					<a class="link" href="{{ navItem.url }}"{{ if page.url === navItem.url }} aria-current="page"{{ /if }}>{{ navItem.data.title }}</a>
-					{{ if navItem.children.length > 0 }}
+					{{ if navItem.children.length }}
 					<ul role="list">
 						{{ for child of navItem.children }}
 						<li>

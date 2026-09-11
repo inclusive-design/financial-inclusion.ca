@@ -1,5 +1,3 @@
-import { __, generatePermalink } from 'eleventy-plugin-fluid';
-
 export default {
 	eleventyComputed: {
 		eleventyNavigation(data) {
@@ -7,16 +5,22 @@ export default {
 				return false;
 			}
 
-			return {
-				key: data.id,
-				title: data.shortTitle === '' ? data.title : data.shortTitle,
+			const pieces = data.id.split('/');
+
+			const eleventyNavigation = {
+				key: pieces.at(-2),
+				title: data.title,
 				order: data.order,
-				parent: data.parent || undefined,
 			};
+
+			if (pieces.at(-3)) {
+				eleventyNavigation.parent = pieces.at(-3);
+			}
+
+			return eleventyNavigation;
 		},
 		permalink(data) {
-			data.slug = data.parent && data.parent !== 'index' ? `${__(`${data.parent}-slug`, {}, data)}/${data.page.fileSlug}` : data.page.fileSlug;
-			return generatePermalink(data, 'pages');
+			return `${data.page.filePathStem.replace('/collections/pages', '')}.html`;
 		},
 	},
 };

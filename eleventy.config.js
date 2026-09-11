@@ -10,7 +10,7 @@ import _ from 'lodash';
 import EleventyVitePlugin from '@11ty/eleventy-plugin-vite';
 import sugarcube from '@sugarcube-sh/vite';
 import parseTransform from './src/_transforms/parse-transform.js';
-import findTranslationKeyFilter from './src/_filters/find-translation-key-filter.js';
+import findTranslationFilter from './src/_filters/find-translation-filter.js';
 import markdownFilter from './src/_filters/markdown-filter.js';
 import synced from './src/design-tokens/synced/design.tokens.json' with { type: 'json' };
 
@@ -62,11 +62,11 @@ export default function eleventy(eleventyConfig) {
 		eleventyConfig.addCollection(
 			`pages_${lang}`,
 			(collection) => collection
-				.getFilteredByGlob(`src/collections/pages/${lang}/*.md`),
+				.getFilteredByGlob('src/collections/pages/**/index.md').filter((item) => item.data.lang === lang),
 		);
 	}
 
-	eleventyConfig.addFilter('findTranslationKey', findTranslationKeyFilter);
+	eleventyConfig.addFilter('findTranslation', findTranslationFilter);
 	eleventyConfig.addFilter('markdown', markdownFilter);
 
 	eleventyConfig.addShortcode('__', (key, values = {}, data) => __(key, values, data));

@@ -1,7 +1,7 @@
 ---
 id: index
-title: Acceuil
-slug: acceuil
+title: Home
+slug: home
 order: 0
 ---
 

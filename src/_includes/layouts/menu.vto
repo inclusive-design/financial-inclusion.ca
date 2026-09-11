@@ -74,29 +74,29 @@
                         onClick="document.referrer ? history.back() : window.location.href = '/'; return false;"
                         aria-label="{{ __ 'Close menu', {}, {lang, translations} }}"
                       >
-                        <svg
-                          role="presentation"
-                          class="open icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="45"
-                          height="44"
-                          fill="none"
-                        >
-                          <path
-                            stroke="currentColor"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="4"
-                            d="M6 22h33M6 11h33M6 33h33"
-                          ></path>
-                        </svg>
+                      <svg
+                        role="presentation"
+                        class="close icon"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="22"
+                        fill="none"
+                      >
+                        <path
+                          stroke="currentColor"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="4"
+                          d="m21.375 2-19 18M2.375 2l19 18"
+                        ></path>
+                      </svg>
                       </a>
                     </div>
                     <ul role="list">
 			{{ for navItem of navItems }}
 			<li>
 				<a class="link" href="{{ navItem.url }}"{{ if page.url === navItem.url }} aria-current="page"{{ /if }}>{{ navItem.data.title }}</a>
-				{{ if navItem.children.length > 0 }}
+				{{ if navItem.children.length }}
 				<ul role="list">
 					{{ for child of navItem.children }}
 					<li>
