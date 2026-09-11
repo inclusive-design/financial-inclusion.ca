@@ -12,7 +12,7 @@ backend:
 media_folder: src/assets/uploads
 public_folder: /assets/uploads
 logo:
-  src: /assets/images/logo.svg
+  src: /icon.svg
   show_in_header: false
 app_title: FIRM CMS
 
