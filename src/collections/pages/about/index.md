@@ -1,8 +1,10 @@
 ---
 id: about/index
-title: About
-slug: about
 order: 1
+title: About
+lang: en
+layout: layouts/base
+permalink: false
 ---
 
 TODO!

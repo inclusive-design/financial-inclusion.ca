@@ -46,8 +46,8 @@ collections:
       subfolders: true
     meta: { path: { index_file: index } }
     slug: "{{fields._slug | localize}}"
-    preview_path: '/{{dirname}}/'
-    filter: { field: id, pattern: '^(?!(index|404)$).+$' }
+    preview_path: '{{dirname}}/'
+    filter: { field: id, pattern: '^(?!(404)$).+$' }
     extension: md
     create: true
     sortable_fields:
@@ -60,7 +60,22 @@ collections:
         name: title
         widget: string
         i18n: true
-      - label: Navigation Order,
+      - label: Language
+        name: lang
+        widget: hidden
+        default: '{{locale}}'
+        i18n: true
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: layouts/base
+        i18n: duplicate
+      - label: Permalink
+        name: permalink
+        widget: hidden
+        default: false
+        i18n: duplicate
+      - label: Navigation Order
         name: order
         widget: number
         min: 0
