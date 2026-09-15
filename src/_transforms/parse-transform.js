@@ -9,7 +9,7 @@ export default function parseTransform(value, outputPath) {
 	if (outputPath && outputPath.includes('.html')) {
 		const { document } = parseHTML(value);
 
-		const articleImages = document.querySelectorAll('.prose img');
+		const articleImages = document.querySelectorAll('article img');
 
 		for (const image of articleImages) {
 			const container = image.parentNode;
