@@ -56,6 +56,10 @@ collections:
         field: order
         direction: ascending
     fields:
+      - label: ID # Remove once https://github.com/sveltia/sveltia-cms/issues/986 is resolved.
+        name: id
+        widget: hidden
+        i18n: duplicate
       - label: Title
         name: title
         widget: string
