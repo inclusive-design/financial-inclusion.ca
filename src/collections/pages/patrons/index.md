@@ -1,7 +1,10 @@
 ---
 id: patrons/index
-order: 8
+order: 5
 title: Patrons
+lang: en
+layout: layouts/base
+permalink: false
 ---
 
 TODO.

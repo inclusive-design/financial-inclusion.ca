@@ -2,7 +2,9 @@
 id: events-and-activities/index
 order: 2
 title: Événements et activités
-slug: evenements-et-activites
+lang: fr
+layout: layouts/base
+permalink: false
 ---
 
 TODO.

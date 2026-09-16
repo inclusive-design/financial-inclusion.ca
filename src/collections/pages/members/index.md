@@ -1,7 +1,10 @@
 ---
 id: members/index
-order: 5
+order: 4
 title: Members
+lang: en
+layout: layouts/base
+permalink: false
 ---
 
 TODO.

@@ -1,8 +1,10 @@
 ---
 id: about/governance/index
-title: Governance
-slug: governance
 order: 1
+title: Governance
+lang: en
+layout: layouts/base
+permalink: false
 ---
 
 TODO.

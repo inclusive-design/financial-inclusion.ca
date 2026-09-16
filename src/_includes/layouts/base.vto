@@ -14,7 +14,7 @@
     }}
 
     <title>{{ pageTitle }}</title>
-    <link href="/assets/styles/app.css" rel="stylesheet" />
+    <link href="/assets/styles/main.css" rel="stylesheet" />
     <!-- uioStyles -->
 
     {{ include "partials/global/meta.vto" }}
@@ -53,16 +53,17 @@
         {{ include "partials/global/navigation.vto" }}
     </header>
 
-    <main class="[ flow ] [ prose ]">
-      <div class="[ flow ] [ hero ] [ region ]">
-        <div class="[ wrapper ]">
-          <h1>{{ title }}</h1>
-        </div>
-      </div>
-      <div class="[ flow ] [ region ] [ wrapper ]">
-        {{ content }}
-        </div>
-      </article>
+    <main>
+    	<article class="[ flow ] [ prose ]">
+			<div class="[ flow ] [ hero ] [ region ]">
+				<div class="[ wrapper ]">
+				    <h1>{{ title }}</h1>
+				</div>
+			</div>
+			<div class="[ flow ] [ region ] [ wrapper ]">
+				{{ content }}
+			</div>
+      	</article>
     </main>
     {{ include "partials/global/footer.vto" }}
     <!-- uioCustomInit supportedLanguages[lang].uioSlug, supportedLanguages[lang].dir -->
