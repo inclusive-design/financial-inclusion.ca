@@ -33,7 +33,7 @@ i18n:
 collections:
   - label: Pages
     label_singular: Page
-    name: page
+    name: pages
     icon: draft
     i18n:
       structure: multiple_folders
@@ -82,14 +82,74 @@ collections:
         i18n: duplicate
       - label: Excerpt
         name: excerpt
-        widget: string
+        widget: text
         required: false
         i18n: true
       - label: Body
         name: body
         widget: markdown
         i18n: true
-
+  - label: Events
+    label_singular: Event
+    name: events
+    icon: event
+    i18n:
+      structure: multiple_folders
+      omit_default_locale_from_file_path: true
+    folder: src/collections/events
+    slug: "{{fields._slug | localize}}"
+    preview_path: '/events-and-activites/{{slug}}/'
+    extension: md
+    create: true
+    sortable_fields:
+      fields: [title, date]
+      default:
+        field: date
+        direction: descending
+    fields:
+      - label: Title
+        name: title
+        widget: string
+        i18n: true
+      - label: Date
+        name: date
+        widget: datetime
+        type: date
+        i18n: duplicate
+      - label: Start Time
+        name: start_time
+        widget: datetime
+        type: time
+        i18n: duplicate
+      - label: End Time
+        name: end_time
+        widget: datetime
+        type: time
+        i18n: duplicate
+      - label: Event URL
+        name: url
+        widget: string
+        type: url
+        i18n: duplicate
+      - label: Event Phone
+        name: phone
+        widget: string
+        required: false
+        i18n: duplicate
+      - label: Event Address
+        name: address
+        widget: text
+        required: false
+        i18n: true
+      - label: Excerpt
+        name: excerpt
+        widget: text
+        required: false
+        i18n: true
+      - label: Body
+        name: body
+        widget: markdown
+        i18n: true
 singletons:
   - label: Site Configuration
     name: site
