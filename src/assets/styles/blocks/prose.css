@@ -31,8 +31,12 @@ CUSTOM PROPERTIES AND CONFIGURATION
 }
 
 /* Heading flow for elements that follow them */
-.prose :is(h1, h2, h3, h4):not(.not-prose) + *:not(.not-prose) {
-    --firm-flow-space: var(--firm-space-md, 1.5rem);
+.prose :is(h2):not(.not-prose) + *:not(.not-prose) {
+    --firm-flow-space: var(--firm-space-fluid-md);
+}
+
+.prose :is(h3):not(.not-prose) + *:not(.not-prose) {
+	--firm-flow-space: var(--firm-space-fluid-sm);
 }
 
 /* Add more space on and around figures and tables */
@@ -42,8 +46,12 @@ CUSTOM PROPERTIES AND CONFIGURATION
 }
 
 /* Add more space to headings on block start */
-.prose *:not(.not-prose) + :is(h1, h2, h3, h4):not(.not-prose) {
-    --firm-flow-space: var(--firm-space-xl, 2.5rem);
+.prose *:not(.not-prose) + :is(h2):not(.not-prose) {
+	--firm-flow-space: var(--firm-space-fluid-2xl-3xl);
+}
+
+.prose *:not(.not-prose) + :is(h3):not(.not-prose) {
+	--firm-flow-space: var(--firm-space-fluid-lg-xl);
 }
 
 /* Flow for list items */
