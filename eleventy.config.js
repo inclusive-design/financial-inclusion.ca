@@ -94,8 +94,7 @@ export default function eleventy(eleventyConfig) {
 		}
 
 		isFirstRun = false;
-		const palette = {};
-		const { /* palette, */ aliases, colors, borders, space, typography } = synced;
+		const { palette, aliases, colors, borders, space, typography } = synced;
 
 		/**
 		 * Recursively replace theme colors with value from Cobalt's legacy mode format.
@@ -241,7 +240,7 @@ export default function eleventy(eleventyConfig) {
 		 */
 
 		for (const [key, value] of Object.entries({
-			/* Palette, */ aliases, colors, borders, space, typography,
+			aliases, colors, borders, space, typography,
 		})) {
 			writeFile(`./src/design-tokens/${key}.json`, JSON.stringify(value, null, 2), 'utf8', (error) => {
 				if (error) {
