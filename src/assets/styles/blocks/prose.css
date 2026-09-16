@@ -20,6 +20,11 @@ CUSTOM PROPERTIES AND CONFIGURATION
     text-wrap: pretty;
 }
 
+/* Set letter spacing for body */
+.prose :is(p, li, figcaption, blockquote) {
+	letter-spacing: 3%;
+}
+
 /* Limit the length of headings, too */
 .prose :is(h1, h2, h3, h4) {
     max-width: 35ch;
@@ -105,7 +110,7 @@ CUSTOM PROPERTIES AND CONFIGURATION
 
 .prose :is(blockquote) p {
     font-style: italic;
-    font-weight: var(--firm-font-weight-medium, 500);
+    font-weight: var(--firm-font-weight-semibold, 500);
 }
 
 .prose :is(kbd) {
@@ -143,7 +148,7 @@ CUSTOM PROPERTIES AND CONFIGURATION
 }
 
 .prose :is(ol > li):not(.not-prose)::marker {
-    font-weight: var(--firm-font-weight-normal, 400);
+    font-weight: var(--firm-font-weight-light, 300);
     color: var(--firm-prose-list-marker-color, currentColor);
     font-size: var(--firm-prose-list-marker-size, 1em);
 }
