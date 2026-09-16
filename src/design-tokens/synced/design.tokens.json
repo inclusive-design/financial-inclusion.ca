@@ -4285,17 +4285,17 @@
         }
       },
       "fixed": {
-        "md": {
+        "xs": {
           "$type": "dimension",
-          "$value": "{space.space.600}",
+          "$value": "{space.space.300}",
           "$description": "",
           "$extensions": {
             "mode": {}
           }
         },
-        "xs": {
+        "md": {
           "$type": "dimension",
-          "$value": "{space.space.300}",
+          "$value": "{space.space.600}",
           "$description": "",
           "$extensions": {
             "mode": {}
@@ -4350,7 +4350,7 @@
         "palette",
         "space"
       ],
-      "createdAt": "2026-08-20T15:45:19.033Z"
+      "createdAt": "2026-09-16T12:02:29.999Z"
     }
   }
 }
