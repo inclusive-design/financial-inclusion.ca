@@ -1,0 +1,28 @@
+{{ import { time } from "../functions/time.vto" }}
+
+{{ layout "layouts/base.vto" }}
+{{ slot header }}
+	<h1>{{ title }}</h1>
+	<div class="[ meta ] [ inverse ]">
+		<strong>{{ __ 'date', {}, {lang, translations} }}</strong> {{ time(start, lang) }}<br />
+		<strong>{{ __ 'location', {}, {lang, translations} }}</strong>
+		{{ if url }}
+			{{ if url.includes('zoom.us') }}
+				{{ set text = 'Zoom' }}
+			{{ /if }}
+			{{ if url.includes('teams.microsoft.com') }}
+				{{ set text = 'Teams' }}
+			{{ /if }}
+			<a href="{{ url }}" class="[ flex ] [ no-underline ]"><span><i class="icon fa-solid fa-video"></i></span><span class="[ underline ]">{{ text }}</span></a>
+		{{ /if }}
+		{{ if url && address }} {{ __ 'and', {}, {lang, translations} }}{{ /if }}
+	 	{{ if address }}
+			{{ set address = address |> addresser }}
+			<span>
+				{{ address.addressLine1 }}, {{ address.placeName }}, {{ address.stateAbbreviation }}
+			</span>
+		{{ /if }}
+	</div>
+{{ /slot}}
+{{ content }}
+{{ /layout }}

@@ -1,6 +1,10 @@
+{{ default header }}
+<h1>{{ title }}</h1>
+{{ /default}}
+
 <!DOCTYPE html>
 <html
-  lang="{{ lang }}"
+  lang="{{ lang }}-CA"
   dir="{{ site[lang].languages.find(item => item.code === lang).dir }}"
 >
   <head>
@@ -22,6 +26,8 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" id="manifest">
+    <script src="https://unpkg.com/@github/relative-time-element"></script>
+
     <script>
       const language = "{{ lang }}";
       const manifestUrl = `/manifest-${language}.json`;
@@ -34,7 +40,7 @@
     <script type="module" src="/assets/scripts/main.js"></script>
     <link href="/assets/styles/main.css" rel="stylesheet" />
     <link rel="preload" as="font" type="font/woff2" crossorigin>
-    <!-- uioScripts -->
+    {{ getBundle "fontawesome" }}
   </head>
   <body class='{{ bodyClass ?? "page" }}'>
     <!-- uioTemplate -->
@@ -55,9 +61,9 @@
 
     <main>
     	<article class="[ flow ] [ prose ]">
-			<div class="[ flow ] [ hero ] [ region ]">
-				<div class="[ wrapper ]">
-				    <h1>{{ title }}</h1>
+			<div class="[[ hero ] [ region ]">
+				<div class="[ wrapper ] [ flow ]">
+					{{ header }}
 				</div>
 			</div>
 			<div class="[ flow ] [ region ] [ wrapper ]">
@@ -66,6 +72,5 @@
       	</article>
     </main>
     {{ include "partials/global/footer.vto" }}
-    <!-- uioCustomInit supportedLanguages[lang].uioSlug, supportedLanguages[lang].dir -->
   </body>
 </html>

@@ -1,0 +1,19 @@
+{{ import { time } from "../../functions/time.vto" }}
+<incd-card class="[ flow ]">
+	<h2 class="[ h4 ]"><a href="{{ event.url }}">{{ event.data.title }}</a></h2>
+	<div class="[ meta ]">
+		<strong>{{ __ 'date', {}, {lang, translations} }}</strong> {{ time(event.data.start, lang) }}<br />
+		<strong>{{ __ 'location', {}, {lang, translations} }}</strong>
+		{{ if event.data.url }}
+			<span>{{ __ 'online', {}, {lang, translations} }}</span>
+		{{ /if }}
+		{{ if event.data.url && event.data.address }} {{ __ 'and', {}, {lang, translations} }}{{ /if }}
+	 	{{ if event.data.address }}
+			{{ set address = event.data.address |> addresser }}
+			<span>
+				{{ address.addressLine1 }}, {{ address.placeName }}, {{ address.stateAbbreviation }}
+			</span>
+		{{ /if }}
+	</div>
+	{{ event.data.excerpt |> markdown }}
+</incd-card>
