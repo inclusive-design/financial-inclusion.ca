@@ -1,0 +1,18 @@
+{{ export function time (datetime, lang, at) }}
+<time datetime="{{ datetime |> toISOString() }}">
+	{{
+		new Intl.DateTimeFormat(lang + "-CA", {
+			year: "numeric",
+			month: "long",
+			day: "numeric",
+			hour: "numeric",
+			minute: "numeric",
+			timeZoneName: "short",
+			timeZone: "America/Toronto"
+		})
+			.format(
+				new Date(datetime)
+			)
+	}}
+</time>
+{{ /export }}

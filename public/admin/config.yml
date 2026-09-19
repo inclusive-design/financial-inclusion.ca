@@ -98,33 +98,40 @@ collections:
       omit_default_locale_from_file_path: true
     folder: src/collections/events
     slug: "{{fields._slug | localize}}"
-    preview_path: '/events-and-activites/{{slug}}/'
+    preview_path: '/events-and-activities/{{slug}}/'
     extension: md
     create: true
     sortable_fields:
-      fields: [title, date]
+      fields: [title, start]
       default:
-        field: date
+        field: start
         direction: descending
     fields:
       - label: Title
         name: title
         widget: string
         i18n: true
-      - label: Date
-        name: date
-        widget: datetime
-        type: date
+      - label: Language
+        name: lang
+        widget: hidden
+        default: '{{locale}}'
+        i18n: true
+      - label: Layout
+        name: layout
+        widget: hidden
+        default: layouts/base
         i18n: duplicate
-      - label: Start Time
-        name: start_time
+      - label: Start
+        name: start
         widget: datetime
-        type: time
+        input_timezone: America/Toronto
+        output_utc: true
         i18n: duplicate
-      - label: End Time
-        name: end_time
+      - label: End
+        name: end
         widget: datetime
-        type: time
+        input_timezone: America/Toronto
+        output_utc: true
         i18n: duplicate
       - label: Event URL
         name: url
@@ -138,7 +145,7 @@ collections:
         i18n: duplicate
       - label: Event Address
         name: address
-        widget: text
+        widget: string
         required: false
         i18n: true
       - label: Excerpt

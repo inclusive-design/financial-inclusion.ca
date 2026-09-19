@@ -1,0 +1,10 @@
+.meta {
+	font-family: var(--firm-font-sans, sans-serif);
+   	font-size: var(--firm-text-md);
+}
+
+.meta .icon {
+	stroke: currentColor;
+	height: 1em;
+	width: 1em;
+}

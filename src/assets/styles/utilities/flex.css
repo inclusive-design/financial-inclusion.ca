@@ -1,3 +1,5 @@
 .flex {
+	align-items: center;
     display: inline-flex;
+    gap: var(--firm-flex-gap, 0.5ch);
 }
