@@ -9,6 +9,7 @@ import fluidPlugin, { __ } from 'eleventy-plugin-fluid';
 import _ from 'lodash';
 import EleventyVitePlugin from '@11ty/eleventy-plugin-vite';
 import sugarcube from '@sugarcube-sh/vite';
+import { parseAddress } from 'addresser';
 import parseTransform from './src/_transforms/parse-transform.js';
 import findTranslationFilter from './src/_filters/find-translation-filter.js';
 import markdownFilter from './src/_filters/markdown-filter.js';
@@ -64,10 +65,17 @@ export default function eleventy(eleventyConfig) {
 			(collection) => collection
 				.getFilteredByGlob('src/collections/pages/**/index.md').filter((item) => item.data.lang === lang),
 		);
+
+		eleventyConfig.addCollection(
+			`events_${lang}`,
+			(collection) => collection
+				.getFilteredByGlob('src/collections/events/**/*.md').filter((item) => item.data.lang === lang),
+		);
 	}
 
 	eleventyConfig.addFilter('findTranslation', findTranslationFilter);
 	eleventyConfig.addFilter('markdown', markdownFilter);
+	eleventyConfig.addFilter('addresser', (value) => parseAddress(value));
 
 	eleventyConfig.addShortcode('__', (key, values = {}, data) => __(key, values, data));
 
@@ -94,8 +102,7 @@ export default function eleventy(eleventyConfig) {
 		}
 
 		isFirstRun = false;
-		const palette = {};
-		const { /* palette, */ aliases, colors, borders, space, typography } = synced;
+		const { palette, aliases, colors, borders, space, typography } = synced;
 
 		/**
 		 * Recursively replace theme colors with value from Cobalt's legacy mode format.
@@ -241,7 +248,7 @@ export default function eleventy(eleventyConfig) {
 		 */
 
 		for (const [key, value] of Object.entries({
-			/* Palette, */ aliases, colors, borders, space, typography,
+			aliases, colors, borders, space, typography,
 		})) {
 			writeFile(`./src/design-tokens/${key}.json`, JSON.stringify(value, null, 2), 'utf8', (error) => {
 				if (error) {

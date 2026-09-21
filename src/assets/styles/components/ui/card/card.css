@@ -1,0 +1,35 @@
+.grid-auto:has(incd-card) {
+	--firm-grid-item-min: calc(992px / 2 - var(--firm-grid-gap));
+}
+
+incd-card {
+	border: var(--firm-border-width-thin) solid var(--firm-color-neutral-800);
+	padding: var(--firm-space-fluid-2xs);
+
+	h2 {
+		text-wrap: pretty;
+	}
+
+	*:not(li, span, div) > a {
+		background-color: revert;
+		box-shadow: revert;
+		color: inherit;
+		text-decoration: none;
+
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: revert;
+			box-shadow: revert;
+			color: inherit;
+			text-decoration: none;
+
+			&:visited {
+				background-color: revert;
+				box-shadow: revert;
+				color: inherit;
+				text-decoration: none;
+			}
+		}
+	}
+}
