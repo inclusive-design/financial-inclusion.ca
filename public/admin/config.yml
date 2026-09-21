@@ -111,6 +111,16 @@ collections:
         name: title
         widget: string
         i18n: true
+      - label: Subtitle
+        name: subtitle
+        widget: string
+        i18n: true
+        required: false
+      - label: Cost
+        name: cost
+        widget: number
+        i18n: duplicate
+        default: 0
       - label: Language
         name: lang
         widget: hidden

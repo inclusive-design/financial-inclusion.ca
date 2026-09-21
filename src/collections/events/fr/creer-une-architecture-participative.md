@@ -1,6 +1,8 @@
 ---
 id: creating-participatory-architecture
-title: 'Créer une architecture participative : les occasions et les défis de la gouvernance inclusive'
+title: Créer une architecture participative
+subtitle: Les occasions et les défis de la gouvernance inclusive
+cost: 0
 lang: fr
 layout: layouts/event
 start: 2026-08-19T18:00:00Z

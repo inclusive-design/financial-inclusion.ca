@@ -101,6 +101,17 @@ h6, .h6 {
     font-size: var(--firm-text-base, 1rem);
 }
 
+.subtitle {
+	font-family: var(--firm-font-serif);
+	font-size: var(--firm-text-md);
+	font-style: italic;
+	font-weight: var(--firm-font-weight-bold);
+}
+
+.prose *:not(.not-prose) + :is(.subtitle):not(.not-prose) {
+    --firm-flow-space: var(--firm-space-fluid-sm);
+}
+
 p {
     text-wrap: pretty;
     overflow-wrap: break-word;

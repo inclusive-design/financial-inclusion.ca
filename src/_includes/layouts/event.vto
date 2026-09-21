@@ -3,6 +3,9 @@
 {{ layout "layouts/base.vto" }}
 {{ slot header }}
 	<h1>{{ title }}</h1>
+	{{ if subtitle }}
+	<p class="[ subtitle ]">{{ subtitle }}</h1>
+	{{ /if }}
 	<div class="[ meta ] [ inverse ]">
 		<strong>{{ __ 'date', {}, {lang, translations} }}</strong> {{ time(start, lang) }}<br />
 		<strong>{{ __ 'location', {}, {lang, translations} }}</strong>
@@ -21,7 +24,9 @@
 			<span>
 				{{ address.addressLine1 }}, {{ address.placeName }}, {{ address.stateAbbreviation }}
 			</span>
-		{{ /if }}
+		{{ /if }}<br />
+		<strong>{{ if cost === 0 }}{{ __ 'free', {}, {lang, translations} }}{{ else }}{{ __ 'tickets', {}, {lang, translations} }}</strong> {{ __ 'price', {dollars: cost}, {lang, translations} }}{{ /if }}
+
 	</div>
 {{ /slot}}
 {{ content }}

@@ -1,6 +1,13 @@
 {{ import { time } from "../../functions/time.vto" }}
 <incd-card class="[ flow ]">
-	<h2 class="[ h4 ]"><a href="{{ event.url }}">{{ event.data.title }}</a></h2>
+	<h3 class="[ h4 ]">
+		<a href="{{ event.url }}">
+			{{ event.data.title }}
+		</a>
+	</h3>
+	{{ if event.data.subtitle }}
+	<p class="[ subtitle ]">{{ event.data.subtitle }}</p>
+	{{ /if }}
 	<div class="[ meta ]">
 		<strong>{{ __ 'date', {}, {lang, translations} }}</strong> {{ time(event.data.start, lang) }}<br />
 		<strong>{{ __ 'location', {}, {lang, translations} }}</strong>
@@ -19,7 +26,8 @@
 			<span>
 				{{ address.addressLine1 }}, {{ address.placeName }}, {{ address.stateAbbreviation }}
 			</span>
-		{{ /if }}
+		{{ /if }}<br />
+		<strong>{{ if event.data.cost === 0 }}{{ __ 'free', {}, {lang, translations} }}{{ else }}{{ __ 'tickets', {}, {lang, translations} }}</strong> {{ __ 'price', {dollars: event.data.cost}, {lang, translations} }}{{ /if }}
 	</div>
 	{{ event.data.excerpt |> markdown }}
 </incd-card>

@@ -1,6 +1,8 @@
 ---
 id: creating-participatory-architecture
-title: 'Creating Participatory Architecture: The Opportunities and Challenges of Inclusive Governance'
+title: Creating Participatory Architecture
+subtitle: The Opportunities and Challenges of Inclusive Governance
+cost: 0
 lang: en
 layout: layouts/event
 start: 2026-08-19T18:00:00Z
