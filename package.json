@@ -39,7 +39,7 @@
 		"@11ty/eleventy-fetch": "^5.1.0",
 		"@11ty/eleventy-navigation": "^1.0.0",
 		"@11ty/eleventy-plugin-vite": "^8.0.0",
-		"@11ty/font-awesome": "^1.0.0",
+		"@11ty/font-awesome": "^2.0.0",
 		"@inclusive-design/components": "^0.1.0",
 		"@zachleat/filter-container": "nedatidrc/filter-container#feat/paginated-results",
 		"eleventy-plugin-fluid": "^3.2.0",
