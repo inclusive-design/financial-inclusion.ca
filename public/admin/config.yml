@@ -138,11 +138,6 @@ collections:
         widget: string
         type: url
         i18n: duplicate
-      - label: Event Phone
-        name: phone
-        widget: string
-        required: false
-        i18n: duplicate
       - label: Event Address
         name: address
         widget: string

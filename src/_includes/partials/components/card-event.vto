@@ -5,7 +5,13 @@
 		<strong>{{ __ 'date', {}, {lang, translations} }}</strong> {{ time(event.data.start, lang) }}<br />
 		<strong>{{ __ 'location', {}, {lang, translations} }}</strong>
 		{{ if event.data.url }}
-			<span>{{ __ 'online', {}, {lang, translations} }}</span>
+		{{ if event.data.url.includes('zoom.us') }}
+			{{ set text = 'Zoom' }}
+		{{ /if }}
+		{{ if event.data.url.includes('teams.microsoft.com') }}
+			{{ set text = 'Teams' }}
+		{{ /if }}
+			<span>{{ text }}</span>
 		{{ /if }}
 		{{ if event.data.url && event.data.address }} {{ __ 'and', {}, {lang, translations} }}{{ /if }}
 	 	{{ if event.data.address }}
