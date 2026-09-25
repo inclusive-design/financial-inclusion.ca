@@ -45,7 +45,7 @@ collections:
       summary: '{{title}}'
       subfolders: true
     meta: { path: { index_file: index } }
-    slug: "{{fields._slug | localize}}"
+    slug: { editable: true, i18n: true }
     preview_path: '{{dirname}}/'
     filter: { field: id, pattern: '^(?!(404)$).+$' }
     extension: md
@@ -147,7 +147,6 @@ singletons:
                 value: rtl
             i18n: duplicate
   - label: Translations
-    label_singular: Translation
     name: translations
     icon: translate
     editor:
