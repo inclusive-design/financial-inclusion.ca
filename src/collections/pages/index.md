@@ -24,14 +24,22 @@ Whether you are a community organisation, financial institution, researcher, pol
 
 Helping organizations strengthen capacity by exploring shared resources, expertise, tools, and services that reduce operational burdens and support long-term sustainability.
 
+_Coming Soon_
+
 ### Knowledge Hub
 
 Mobilizing community-generated knowledge, practical tools, research, and resources that help advance financial inclusion and organizational resilience.
+
+_Coming Soon_
 
 ### Community of Practice
 
 Creating opportunities for peer learning, collaboration, networking, and collective problem-solving across communities and sectors.
 
+_Coming Soon_
+
 ### Community-Led Governance
 
 Supporting inclusive decision-making and ensuring that disability, Deaf, and intersectional communities remain at the centre of FIRM's future direction.
+
+_Coming Soon_
