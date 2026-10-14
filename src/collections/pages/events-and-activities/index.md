@@ -3,8 +3,8 @@ id: events-and-activities/index
 order: 2
 title: Events and Activities
 lang: en
-layout: layouts/base
+layout: layouts/events
 permalink: false
 ---
 
-TODO.
+This space intentionally left blank.

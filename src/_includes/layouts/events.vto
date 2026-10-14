@@ -1,0 +1,7 @@
+{{ layout "layouts/base.vto" }}
+<div class="[ grid-auto ]">
+	{{ for event of collections['events_' + lang] }}
+		{{ include '../partials/components/card-event.vto' { event } }}
+	{{ /for }}
+</div>
+{{ /layout }}
