@@ -4,7 +4,7 @@ order: 4
 title: Submit Resources
 lang: en
 layout: layouts/base
-permalink: false
+draft: true
 ---
 
 TODO.

@@ -4,7 +4,7 @@ order: 4
 title: Membres
 lang: fr
 layout: layouts/base
-permalink: false
+draft: true
 ---
 
 TODO.
