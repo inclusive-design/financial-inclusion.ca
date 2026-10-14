@@ -908,7 +908,7 @@
 				"surface": {
 					"default": {
 						"$type": "color",
-						"$value": "{aliases.color.neutral.200}",
+						"$value": "{colors.color.white}",
 						"$description": "",
 						"$extensions": {
 							"mode": {
@@ -1048,7 +1048,7 @@
 					"surface": {
 						"default": {
 							"$type": "color",
-							"$value": "{aliases.color.neutral.100}",
+							"$value": "{colors.color.white}",
 							"$description": "",
 							"$extensions": {
 								"mode": {
