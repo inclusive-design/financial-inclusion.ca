@@ -12,6 +12,7 @@ export default defineConfig({
 		prefix: 'firm',
 		permutations: [
 			{ input: { theme: 'light' }, selector: ':root' },
+			{ input: { theme: 'dark' }, selector: ':root', atRule: '@media (prefers-color-scheme: dark)' },
 			{ input: { theme: 'dark' }, selector: '.fl-theme-dark' },
 			{ input: { theme: 'uio' }, selector: '[class^="fl-theme-"]:not(.fl-theme-prefsEditor-default):not(.fl-theme-dark)' },
 			{ input: { theme: 'bw' }, selector: '.fl-theme-bw' },
