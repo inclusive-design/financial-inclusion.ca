@@ -1,5 +1,12 @@
 # Changelog
 
+## [2026.10.1](https://github.com/inclusive-design/financial-inclusion.ca/compare/v2026.10.0...v2026.10.1) (2026-10-15)
+
+
+### Bug Fixes
+
+* add wordmark variant to support dark mode brand ([#76](https://github.com/inclusive-design/financial-inclusion.ca/issues/76)) ([8aad3fe](https://github.com/inclusive-design/financial-inclusion.ca/commit/8aad3fe6cb68c7a0567a4311b387421367f085d7))
+
 ## [2026.10.0](https://github.com/inclusive-design/financial-inclusion.ca/compare/v2026.4.0...v2026.10.0) (2026-10-15)
 
 
