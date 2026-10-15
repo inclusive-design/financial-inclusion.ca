@@ -7,4 +7,10 @@
 <meta property="og:locale" content="{{ lang }}">
 <meta property="og:type" content="website">
 <meta property="og:url" content="{{ site.en.url }}{{ page.url }}">
+<meta property="og:image" content="{{ eleventy.runMode === 'build' ? site.en.url : 'http://localhost:8080' }}/assets/uploads/open-graph.png" />
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ if title }} {{ title }} | {{ /if }} {{ site[lang].name }}" />
+<meta name="twitter:description" content="{{ site[lang].description }}" />
+<meta name="twitter:image" content="{{ eleventy.runMode === 'build' ? site.en.url : 'http://localhost:8080' }}/assets/uploads/open-graph.png" />
+
 <link rel="canonical" href="{{ site.en.url }}{{ page.url }}">
