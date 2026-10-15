@@ -1,6 +1,6 @@
 {
 	"en": {
-		"name": "Financial Inclusion and Resilience Movement",
+		"name": "FIRM",
 		"description": "From research to action: advancing financial inclusion through community-led innovation.",
 		"authorName": "Inclusive Design Research Centre",
 		"authorEmail": "idrc@ocadu.ca",
@@ -20,7 +20,7 @@
 		]
 	},
 	"fr": {
-		"name": "Mouvement pour l'inclusion et la resilience financière",
+		"name": "MIRF",
 		"description": "De la recherche à l’action : promouvoir l’inclusion financière grâce à l’innovation menée par la communauté.",
 		"authorName": "Inclusive Design Research Centre",
 		"authorEmail": "idrc@ocadu.ca",

@@ -10,7 +10,8 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-
+    <meta name="text-scale" content="scale" />
+    <meta name="color-scheme" content="dark light" />
     {{
       set pageTitle = title
         ? `${title} | ${site[lang ?? "en"].name}`
@@ -45,6 +46,11 @@
     <!-- uioTemplate -->
     <header>
     	<div class="[ global ] [ inverse ]">
+      		<div class="[ skip-container ]">
+	        	<div class="[ wrapper ]">
+	                <a class="[ skip ] [ step--1 ]" href="#main">Skip to content</a>
+	         	</div>
+            </div>
       		<div class="[ wrapper ] [ switcher ] [ step--1 ]">
 		        <div>
 		          <a rel="external" href="https://idrc.ocadu.ca/">

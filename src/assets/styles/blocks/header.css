@@ -8,10 +8,24 @@ header {
     color: var(--firm-color-nav-global-content);
     display: flex;
     min-height: var(--firm-space-2000);
+}
 
-    a {
-       color: currentColor;
-    }
+.skip-container {
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.skip {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    text-decoration: none;
+    white-space: nowrap;
+    width: 1px;
 }
 
 .global .switcher {
@@ -21,4 +35,41 @@ header {
 .hero {
     background: var(--firm-color-hero-surface);
     color: var(--firm-color-hero-content-default);
+}
+
+.skip-container:focus-within {
+	display: flex;
+	height: var(--firm-space-fluid-xs);
+	z-index: 1;
+}
+
+.skip-container .wrapper {
+	align-items: center;
+	display: flex;
+	height: var(--firm-space-fluid-xs);
+}
+
+.skip:focus {
+    align-items: center;
+    clip: auto;
+    clip-path: none;
+    display: flex;
+    height: var(--firm-space-fluid-xs);
+    justify-content: center;
+    outline: 1px solid transparent;
+    overflow: auto;
+    padding-inline: var(--firm-space-fluid-2xs);
+    width: 100%;
+    z-index: 1;
+}
+
+
+@media (width >= 60rem) {
+    .skip-container:focus-within {
+        width: 100vw;
+    }
+
+    .skip:focus {
+        max-width: 24.5rem;
+    }
 }
