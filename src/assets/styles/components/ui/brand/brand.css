@@ -2,43 +2,70 @@
    Brand Styles
    ============================================ */
 .wrapper:has(.brand) {
-    padding-inline: var(--firm-space-fixed-md);
+	padding-inline: var(--firm-space-fixed-md);
 }
 
 .brand {
-    color: var(--firm-color-nav-content-default);
-    height: var(--firm-space-3600, 144px);
-    margin-left: calc(-1 * var(--firm-space-fixed-md));
-    max-width: 50%;
-    position: relative;
-    width: max-content;
-    z-index: 1;
+	color: var(--firm-color-nav-content-default);
+	height: var(--firm-space-3600, 144px);
+	margin-left: calc(-1 * var(--firm-space-fixed-md));
+	max-width: 50%;
+	position: relative;
+	width: max-content;
+	z-index: 1;
 
-    a {
-  		align-items: center;
-    	background-color: transparent;
-    	border: var(--firm-form-control-border-width) var(--firm-border-style) var(--firm-color-nav-surface-default);
-        color: var(--firm-color-nav-content-default);
-        display: inline-flex;
-        height: inherit;
-        text-decoration: none;
-    }
+	a {
+		align-items: center;
+		background-color: transparent;
+		border: var(--firm-form-control-border-width) var(--firm-border-style) var(--firm-color-nav-surface-default);
+		color: var(--firm-color-nav-content-default);
+		display: inline-flex;
+		height: inherit;
+		text-decoration: none;
+	}
 
-    a:hover {
-        border-color: var(--firm-color-nav-border-hover);
-        box-shadow: none;
-        color: var(--firm-color-nav-content-hover);
-    }
+	a:hover {
+		border-color: var(--firm-color-nav-border-hover);
+		box-shadow: none;
+		color: var(--firm-color-nav-content-hover);
+	}
 
-    a:focus,
-    a:active {
-        background-color: transparent;
-        border-color: var(--firm-color-nav-surface-focus);
-        box-shadow: none;
-        color: var(--firm-color-nav-content-focus);
-    }
+	a:focus,
+	a:active {
+		background-color: transparent;
+		border-color: var(--firm-color-nav-surface-focus);
+		box-shadow: none;
+		color: var(--firm-color-nav-content-focus);
+	}
 
-    svg {
-        max-width: 30vw;
-    }
+	svg {
+		max-width: 30vw;
+	}
+
+	svg.themeable {
+		display: none;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	.brand {
+		svg:not(.themeable) {
+			display: none;
+		}
+
+		svg.themeable {
+			display: block;
+		}
+	}
+}
+
+/* stylelint-disable-next-line selector-class-pattern */
+[class^="fl-theme-"]:not(.fl-theme-prefsEditor-default) .brand {
+	svg:not(.themeable) {
+		display: none;
+	}
+
+	svg.themeable {
+		display: block;
+	}
 }

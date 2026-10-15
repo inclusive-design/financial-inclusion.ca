@@ -1,7 +1,6 @@
 <div class="[ wrapper ]">
   <div class="[ brand ]">
   {{ set homeUrl = lang && lang === "en" ? "/" : `/${lang}/` }}
-
-          <a rel="home" href="{{ homeUrl }}" aria-label="{{ site[lang].name }}"> {{ include 'svg/firm-wordmark.svg' }} </a>
+          <a rel="home" href="{{ homeUrl }}" aria-label="{{ site[lang].name }}"> {{ include 'svg/firm-wordmark.svg' }} {{ include 'svg/firm-wordmark-themeable.svg' }}</a>
   </div>
 </div>
