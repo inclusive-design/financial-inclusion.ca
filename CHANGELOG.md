@@ -1,5 +1,22 @@
 # Changelog
 
+## [2026.10.2](https://github.com/inclusive-design/financial-inclusion.ca/compare/v2026.10.1...v2026.10.2) (2026-10-15)
+
+
+### Features
+
+* add open graph image ([#80](https://github.com/inclusive-design/financial-inclusion.ca/issues/80)) ([3f44560](https://github.com/inclusive-design/financial-inclusion.ca/commit/3f44560f11e746c382721fcaeae09fd007212bcd))
+
+
+### Bug Fixes
+
+* resolve issues with SVGs ([#78](https://github.com/inclusive-design/financial-inclusion.ca/issues/78)) ([5a1598c](https://github.com/inclusive-design/financial-inclusion.ca/commit/5a1598cf08e1808a6f510ce62e08d94c39bbfa23))
+
+
+### Miscellaneous Chores
+
+* **release:** set version ([cd27c12](https://github.com/inclusive-design/financial-inclusion.ca/commit/cd27c129a1a9f8798d7a9ddcc5be61773f143fde))
+
 ## [2026.10.1](https://github.com/inclusive-design/financial-inclusion.ca/compare/v2026.10.0...v2026.10.1) (2026-10-15)
 
 
