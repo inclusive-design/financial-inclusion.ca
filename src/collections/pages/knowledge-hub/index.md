@@ -4,7 +4,7 @@ order: 3
 title: Knowledge Hub
 lang: en
 layout: layouts/base
-permalink: false
+draft: true
 ---
 
 TODO.

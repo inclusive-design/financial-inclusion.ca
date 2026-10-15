@@ -4,7 +4,7 @@ order: 2
 title: Shared Services
 lang: en
 layout: layouts/base
-permalink: false
+draft: true
 ---
 
 TODO.

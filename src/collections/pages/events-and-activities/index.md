@@ -4,7 +4,7 @@ order: 2
 title: Events and Activities
 lang: en
 layout: layouts/events
-permalink: false
+draft: true
 ---
 
 This space intentionally left blank.

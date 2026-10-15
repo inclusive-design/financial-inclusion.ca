@@ -69,11 +69,10 @@ collections:
         name: layout
         widget: hidden
         default: layouts/base
-        i18n: duplicate
-      - label: Permalink
-        name: permalink
-        widget: hidden
-        default: false
+        i18n: true
+      - label: Draft
+        name: draft
+        widget: boolean
         i18n: duplicate
       - label: Navigation Order
         name: order
@@ -111,6 +110,10 @@ collections:
         name: title
         widget: string
         i18n: true
+      - label: Draft
+        name: draft
+        widget: boolean
+        i18n: duplicate
       - label: Subtitle
         name: subtitle
         widget: string

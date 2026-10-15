@@ -4,7 +4,7 @@ order: 1
 title: Organization Directory
 lang: en
 layout: layouts/base
-permalink: false
+draft: true
 excerpt: directory
 ---
 

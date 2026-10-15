@@ -15,15 +15,16 @@
     z-index: 1;
 
     a {
-        border: var(--firm-form-control-border-width) var(--firm-border-style) var(--firm-color-nav-surface-default);
+  		align-items: center;
+    	background-color: transparent;
+    	border: var(--firm-form-control-border-width) var(--firm-border-style) var(--firm-color-nav-surface-default);
         color: var(--firm-color-nav-content-default);
-        display: inline-block;
+        display: inline-flex;
         height: inherit;
         text-decoration: none;
     }
 
     a:hover {
-        background-color: var(--firm-color-nav-surface-hover);
         border-color: var(--firm-color-nav-border-hover);
         box-shadow: none;
         color: var(--firm-color-nav-content-hover);
@@ -31,7 +32,7 @@
 
     a:focus,
     a:active {
-        background-color: var(--firm-color-nav-surface-focus);
+        background-color: transparent;
         border-color: var(--firm-color-nav-surface-focus);
         box-shadow: none;
         color: var(--firm-color-nav-content-focus);

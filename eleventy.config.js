@@ -22,6 +22,7 @@ import synced from './src/design-tokens/synced/design.tokens.json' with { type: 
 export default function eleventy(eleventyConfig) {
 	eleventyConfig.watchIgnores.add('src/design-tokens/*.json');
 	eleventyConfig.watchIgnores.add('src/design-tokens/themes/*.json');
+	eleventyConfig.watchIgnores.add('public/admin/index.html');
 
 	eleventyConfig.addGlobalData('now', () => new Date());
 	eleventyConfig.addPlugin(fontAwesomePlugin);
@@ -82,8 +83,8 @@ export default function eleventy(eleventyConfig) {
 	eleventyConfig.addTransform('parse', parseTransform);
 
 	eleventyConfig.addPassthroughCopy('src/assets');
-	eleventyConfig.addPassthroughCopy('public/admin');
-	eleventyConfig.addPassthroughCopy('public/assets');
+	eleventyConfig.addPassthroughCopy({ 'public/admin': '/admin' });
+	eleventyConfig.addPassthroughCopy({ 'public/assets': '/assets' });
 	eleventyConfig.addPassthroughCopy({ 'public/icons': '/' });
 
 	eleventyConfig.addPlugin(IdAttributePlugin);

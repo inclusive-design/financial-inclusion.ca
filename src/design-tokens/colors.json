@@ -57,7 +57,7 @@
     "nav": {
       "surface": {
         "default": {
-          "$value": "{color.primary.500}"
+          "$value": "{color.white}"
         },
         "focus": {
           "$value": "{color.neutral.800}"
@@ -85,7 +85,7 @@
       "secondary": {
         "surface": {
           "default": {
-            "$value": "{color.primary.600}"
+            "$value": "{color.white}"
           },
           "hover": {
             "$value": "{color.primary.600}"

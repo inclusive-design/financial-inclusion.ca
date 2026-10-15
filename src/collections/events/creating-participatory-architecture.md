@@ -1,6 +1,7 @@
 ---
 id: creating-participatory-architecture
 title: Creating Participatory Architecture
+draft: true
 subtitle: The Opportunities and Challenges of Inclusive Governance
 cost: 0
 lang: en

@@ -1,6 +1,7 @@
 ---
 id: creating-participatory-architecture
 title: Créer une architecture participative
+draft: true
 subtitle: Les occasions et les défis de la gouvernance inclusive
 cost: 0
 lang: fr
