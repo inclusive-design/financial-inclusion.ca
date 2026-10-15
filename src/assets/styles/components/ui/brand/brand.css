@@ -15,10 +15,11 @@
     z-index: 1;
 
     a {
+  		align-items: center;
     	background-color: transparent;
     	border: var(--firm-form-control-border-width) var(--firm-border-style) var(--firm-color-nav-surface-default);
         color: var(--firm-color-nav-content-default);
-        display: inline-block;
+        display: inline-flex;
         height: inherit;
         text-decoration: none;
     }
