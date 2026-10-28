@@ -4,6 +4,7 @@ order: 1
 title: About
 lang: en
 layout: layouts/base
+draft: false
 ---
 
 ## What is Firm?
