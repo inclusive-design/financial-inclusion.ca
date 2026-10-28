@@ -4,6 +4,7 @@ order: 0
 title: Building Financial Inclusion Through Community Action
 lang: en
 layout: layouts/base
+draft: false
 ---
 
 **FIRM (Financial Inclusion and Resilience Movement)** is a growing community-led movement connecting organisations, institutions, researchers, and individuals across Canada who are working to strengthen financial inclusion and community resilience.
