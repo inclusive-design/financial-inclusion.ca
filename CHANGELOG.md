@@ -1,5 +1,17 @@
 # Changelog
 
+## [2026.11.0](https://github.com/inclusive-design/financial-inclusion.ca/compare/v2026.10.2...v2026.11.0) (2026-11-01)
+
+
+### Bug Fixes
+
+* switch auth base_url ([230ab0c](https://github.com/inclusive-design/financial-inclusion.ca/commit/230ab0c31646500d2eb630b6b8f7c6dbcff633ae))
+
+
+### Miscellaneous Chores
+
+* **release:** bump version ([5a3ec2f](https://github.com/inclusive-design/financial-inclusion.ca/commit/5a3ec2f39ca18c275bae9be318176e46cd71dd2f))
+
 ## [2026.10.2](https://github.com/inclusive-design/financial-inclusion.ca/compare/v2026.10.1...v2026.10.2) (2026-10-15)
 
 
