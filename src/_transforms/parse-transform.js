@@ -36,39 +36,12 @@ export default function parseTransform(value, outputPath) {
 			const li = document.createElement('li');
 			li.append(link);
 
-			if (navContainer && heading.tagName === 'H2') {
-				li.dataset.level = '2';
-				navContainer.append(li);
+			if (!(navContainer && heading.tagName === 'H2')) {
+				continue;
 			}
 
-			if (navContainer && heading.tagName === 'H3') {
-				li.dataset.level = '3';
-
-				/*
-				Retrieve the last list item for an H2
-				*/
-				const lastListItem = [...navContainer.querySelectorAll('li[data-level="2"]')].pop();
-
-				/*
-				See if it contains an unordered list for nested H3s
-				*/
-				let subUl = lastListItem.querySelector('ul');
-
-				/*
-				Add the H3 list item to the unordered list if it exists
-				*/
-				if (subUl) {
-					subUl.append(li);
-					/*
-					Create a new unordered list containing the H3 list item and add it to the H2 list item.
-					*/
-				} else {
-					subUl = document.createElement('ul');
-					subUl.className = 'flow';
-					subUl.append(li);
-					lastListItem.append(subUl);
-				}
-			}
+			li.dataset.level = '2';
+			navContainer.append(li);
 		}
 
 		for (const footnote of document.querySelectorAll('[role="doc-endnote"]')) {
