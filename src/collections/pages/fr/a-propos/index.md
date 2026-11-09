@@ -1,5 +1,7 @@
 ---
 id: about/index
+aliases:
+  - /5ed3fa046e46/
 order: 1
 title: À propos
 lang: fr
