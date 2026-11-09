@@ -198,6 +198,14 @@ singletons:
         name: url
         widget: string
         i18n: duplicate
+      - label: LinkedIn URL
+        name: linkedin
+        widget: string
+        i18n: duplicate
+      - label: YouTube URL
+        name: youtube
+        widget: string
+        i18n: duplicate
       - label: Supported Languages
         label_singular: Supported Language
         name: languages
