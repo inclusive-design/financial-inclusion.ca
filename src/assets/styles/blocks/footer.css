@@ -28,3 +28,11 @@ footer .switcher > :nth-child(1) {
 footer .grid-auto {
     --firm-grid-align-items: center;
 }
+
+footer .cluster {
+	--firm-cluster-gap: 0.75rem;
+}
+
+footer [role="list"].cluster {
+	margin-block-start: var(--firm-space-fluid-2xs);
+}

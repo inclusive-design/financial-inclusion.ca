@@ -1,42 +1,46 @@
 {
-	"en": {
-		"name": "FIRM",
-		"description": "From research to action: advancing financial inclusion through community-led innovation.",
-		"authorName": "Inclusive Design Research Centre",
-		"authorEmail": "idrc@ocadu.ca",
-		"authorWebsite": "https://idrc.ocadu.ca",
-		"url": "https://financial-inclusion.ca",
-		"languages": [
-			{
-				"name": "English",
-				"code": "en",
-				"direction": "ltr"
-			},
-			{
-				"name": "French",
-				"code": "fr",
-				"direction": "ltr"
-			}
-		]
-	},
-	"fr": {
-		"name": "MIRF",
-		"description": "De la recherche à l’action : promouvoir l’inclusion financière grâce à l’innovation menée par la communauté.",
-		"authorName": "Inclusive Design Research Centre",
-		"authorEmail": "idrc@ocadu.ca",
-		"authorWebsite": "https://idrc.ocadu.ca",
-		"url": "https://financial-inclusion.ca",
-		"languages": [
-			{
-				"name": "anglais",
-				"code": "en",
-				"direction": "ltr"
-			},
-			{
-				"name": "français",
-				"code": "fr",
-				"direction": "ltr"
-			}
-		]
-	}
+  "en": {
+    "name": "FIRM",
+    "description": "From research to action: advancing financial inclusion through community-led innovation.",
+    "authorName": "Inclusive Design Research Centre",
+    "authorEmail": "idrc@ocadu.ca",
+    "authorWebsite": "https://idrc.ocadu.ca",
+    "url": "https://financial-inclusion.ca",
+    "linkedin": "https://www.linkedin.com/company/financial-inclusion-and-resilience-movement-firm/",
+    "youtube": "https://www.youtube.com/@FinancialinclusionPartnership",
+    "languages": [
+      {
+        "name": "English",
+        "code": "en",
+        "direction": "ltr"
+      },
+      {
+        "name": "French",
+        "code": "fr",
+        "direction": "ltr"
+      }
+    ]
+  },
+  "fr": {
+    "name": "MIRF",
+    "description": "De la recherche à l’action : promouvoir l’inclusion financière grâce à l’innovation menée par la communauté.",
+    "authorName": "Inclusive Design Research Centre",
+    "authorEmail": "idrc@ocadu.ca",
+    "authorWebsite": "https://idrc.ocadu.ca",
+    "url": "https://financial-inclusion.ca",
+    "linkedin": "https://www.linkedin.com/company/financial-inclusion-and-resilience-movement-firm/",
+    "youtube": "https://www.youtube.com/@FinancialinclusionPartnership",
+    "languages": [
+      {
+        "name": "anglais",
+        "code": "en",
+        "direction": "ltr"
+      },
+      {
+        "name": "français",
+        "code": "fr",
+        "direction": "ltr"
+      }
+    ]
+  }
 }
