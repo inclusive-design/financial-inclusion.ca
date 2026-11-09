@@ -1,5 +1,24 @@
 # Changelog
 
+## [2026.11.0](https://github.com/inclusive-design/financial-inclusion.ca/compare/v2026.10.2...v2026.11.0) (2026-11-09)
+
+
+### Features
+
+* add social icons, update dependencies ([#92](https://github.com/inclusive-design/financial-inclusion.ca/issues/92)) ([6156d45](https://github.com/inclusive-design/financial-inclusion.ca/commit/6156d451bf5a8a76cc547f035c2213b774f6a02c))
+
+
+### Bug Fixes
+
+* **deps:** update dependency @11ty/eleventy-fetch to v6 ([#84](https://github.com/inclusive-design/financial-inclusion.ca/issues/84)) ([aaff450](https://github.com/inclusive-design/financial-inclusion.ca/commit/aaff4502eaafb0e85655b5e51a5297ab7eb8decc))
+* link translations ([#91](https://github.com/inclusive-design/financial-inclusion.ca/issues/91)) ([1b06234](https://github.com/inclusive-design/financial-inclusion.ca/commit/1b06234902a39b3f21b6c05cbc266a6a1c439fc3))
+* switch auth base_url ([230ab0c](https://github.com/inclusive-design/financial-inclusion.ca/commit/230ab0c31646500d2eb630b6b8f7c6dbcff633ae))
+
+
+### Miscellaneous Chores
+
+* **release:** bump version ([5a3ec2f](https://github.com/inclusive-design/financial-inclusion.ca/commit/5a3ec2f39ca18c275bae9be318176e46cd71dd2f))
+
 ## [2026.10.2](https://github.com/inclusive-design/financial-inclusion.ca/compare/v2026.10.1...v2026.10.2) (2026-10-15)
 
 
