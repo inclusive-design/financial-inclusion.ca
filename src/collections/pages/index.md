@@ -44,3 +44,5 @@ _Coming Soon_
 Supporting inclusive decision-making and ensuring that disability, Deaf, and intersectional communities remain at the centre of FIRM's future direction.
 
 _Coming Soon_
+
+![Financial Inclusion & Resilience Movement model. Community organizations are at the centre of an interconnected system linking shared services, community-led governance, a community of practice, community organizers, a knowledge hub, and institutional members. Curved arrows show relationships among these parts.](/assets/uploads/FIRM-community-support-model.png "How the Financial Inclusion & Resilience Movement Works")
