@@ -44,3 +44,15 @@ _À venir_
 Soutenir une prise de décision inclusive et veiller à ce que les communautés de personnes en situation de handicap, de personnes sourdes et les communautés intersectionnelles restent au cœur de l’orientation future de FIRM.
 
 _À venir_
+
+## Comment fonctionne FIRM
+
+La figure ci-dessous illustre comment les quatre composantes de FIRM travaillent ensemble pour soutenir un écosystème financier axé sur la communauté, qui favorise l’innovation, renforce les capacités et veille à ce que personne ne soit laissé de côté.
+
+![Schéma du Mouvement pour l’inclusion financière et la résilience (FIRM). Les organisations communautaires sont au centre d’un écosystème interconnecté comprenant des services partagés, une gouvernance dirigée par la communauté, une communauté de pratique, des organisateurs communautaires, un carrefour de connaissances et des membres institutionnels. Des flèches illustrent les liens entre ces composantes.](/assets/uploads/FIRM-community-support-model-FINAL_FR.png)
+
+### Des constats à l’action
+
+Le Mouvement pour l’inclusion financière et la résilience (FIRM) s’appuie sur les constats issus de la co-conception, de l’analyse de l’environnement et de la collaboration avec des personnes ayant une expérience vécue. Il répond directement aux défis auxquels font face les personnes, les organisations communautaires et les institutions financières.
+
+FIRM n’est pas un modèle théorique : c’est une feuille de route concrète pour bâtir des systèmes financiers inclusifs et axés sur la communauté.
