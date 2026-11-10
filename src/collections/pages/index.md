@@ -49,7 +49,7 @@ _Coming Soon_
 
 The figure below illustrates how FIRM’s four components work together to support a community-driven financial ecosystem—one that fosters innovation, builds capacity, and ensures that no one is left behind.
 
-![Financial Inclusion & Resilience Movement model. Community organizations are at the centre of an interconnected system linking shared services, community-led governance, a community of practice, community organizers, a knowledge hub, and institutional members. Curved arrows show relationships among these parts.](/assets/uploads/FIRM-community-support-model.png "How the Financial Inclusion & Resilience Movement Works")
+![Financial Inclusion & Resilience Movement model. Community organizations are at the centre of an interconnected system linking shared services, community-led governance, a community of practice, community organizers, a knowledge hub, and institutional members. Curved arrows show relationships among these parts.](/assets/uploads/FIRM-community-support-model.png)
 
 ### From Insights to Action
 
