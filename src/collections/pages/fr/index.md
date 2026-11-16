@@ -21,13 +21,13 @@ Que vous soyez une organisation communautaire, une institution financière, un c
 
 ## Les missions de FIRM
 
-### Pôle de services partagés
+### Services partagés
 
 Aider les organisations à renforcer leurs capacités en explorant les ressources, l’expertise, les outils et les services partagés qui allègent les charges opérationnelles et favorisent la pérennité à long terme.
 
 _À venir_
 
-### Pôle de connaissances
+### Carrefour de connaissances
 
 Mobiliser les connaissances générées par la communauté, les outils pratiques, les recherches et les ressources qui contribuent à faire progresser l’inclusion financière et la résilience organisationnelle.
 
