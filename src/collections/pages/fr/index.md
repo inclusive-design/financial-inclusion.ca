@@ -1,10 +1,10 @@
 ---
 id: index
-order: 0
 title: Favoriser l'inclusion financière grâce à l'action communautaire
 lang: fr
 layout: layouts/base
 draft: false
+order: 0
 ---
 
 **FIRM (Financial Inclusion and Resilience Movement)** est un mouvement communautaire en pleine expansion qui rassemble, à travers le Canada, des organisations, des institutions, des chercheurs et des particuliers œuvrant à renforcer l’inclusion financière et la résilience communautaire.
